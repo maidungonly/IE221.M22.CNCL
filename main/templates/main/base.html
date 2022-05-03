@@ -1,0 +1,19 @@
+<!-- base.html có thể tái sử dụng ở các page khác -->
+
+<html>
+     <head>
+         <title>
+             {% block title %}
+             Ngoc's Website
+             {% endblock %}
+         </title>
+     </head>
+
+     <body>
+         <div id="content" name="content">
+         {% block content %}
+
+         {% endblock %}
+        </div>   
+     </body> 
+</html>
