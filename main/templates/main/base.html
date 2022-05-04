@@ -12,30 +12,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
  
     <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" >  
     
 </head>
 
 <body>
-    <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src="{% static 'images\Authentic_Taste__2_-removebg-preview 1.svg' %}" alt="" width="50" height="50" class="d-inline-block align-text-top">
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        
+          <a class="navbar-brand mb-0 h1" href="#">
+            <img src="https://getbootstrap.com//docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="50" height="50" class="d-inline-block align-top">
             K-Mart
           </a>
-          <form class="d-flex">
+          <!-- <form class="navbar-collapse">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
 
           <a href="#" class="navbar-shoppingcart">
-            <i class="fa-solid fa-cart-shopping"></i>
-          </a>
-        </div>
+            <i class="fa-solid fa-cart-shopping" style="color: black;"></i>
+          </a> -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ui class="navbar-nav">
+                  <li class="nav-item active">
+                      <a href="#" class="nav-link">
+                          Home
+                      </a>
+                      
+                  </li>
+                  <li class="nav-item active">
+                    <a href="#" class="nav-link">
+                        Contact
+                    </a>
+                    
+                </li>
+                <li class="nav-item active">
+                    <a href="#" class="nav-link">
+                        Bye
+                    </a>
+                    
+                </li>
+              </ui>
+
+
+          </div>
+        
     </nav>
 
-
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>  
 </body>
