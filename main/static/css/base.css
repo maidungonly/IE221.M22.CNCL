@@ -18,37 +18,10 @@
     font-family: reenie-beenie;
     src: url(../font/ReenieBeanie-Regular.ttf);
 }
-/* .navbar{
-    background-color: #FFF691;
-} */
-/* a{
-    font-size: 64px;
-    font-family: reenie-beenie;
+.navbar_Kmart{
+    background-color: #FFF691 !important;
+}
+a{
+    color:red !important;
     text-decoration: none;
-    color: #000;
-} */
-.sidenavbar{
-    height: 100%;
-    width: 160px;
-    position: fixed;
-    z-index: 1;
-    top:0;
-    left: 0;
-    background-color: #000;
-    overflow-x: hidden;
-    padding-top: 20px;
-}
-.sidenavbar a{
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    color: #fff;
-    display: block;
-}
-.sidenavbar a:hover{
-    color: gray;
-
-}
-.main{
-    margin-left: 160px;
-    padding: 0px 10px; 
 }
