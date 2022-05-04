@@ -1,22 +1,6 @@
 <!-- base.html có thể tái sử dụng ở các page khác -->
 
-<!-- <html>
-     <head>
-         <title>
-             {% block title %}
-             Ngoc's Website
-             {% endblock %}
-         </title>
-     </head>
 
-     <body>
-         <div id="content" name="content">
-         {% block content %}
-
-         {% endblock %}
-        </div>   
-     </body> 
-</html> -->
 
 <!DOCTYPE html>
 <html lang="vi">
@@ -26,14 +10,17 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title%}{% endblock %}</title>
+ 
     <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
-    {% block linkcss%}{% endblock %}
+    
 </head>
 
 <body>
     <header>
         <h1 class="header__test">HELLO XOXO</h1>
+        {% block content %}
+        
+        {% endblock %}
     </header>
 </body>
