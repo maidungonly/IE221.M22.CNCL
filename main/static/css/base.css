@@ -1,27 +1,43 @@
 @font-face {
-    font-family: quicksand-light;
-    src: url(../font/Quicksand-Light.ttf);
+  font-family: quicksand-light;
+  src: url(../font/Quicksand-Light.ttf);
 }
 @font-face {
-    font-family: quicksand;
-    src: url(../font/Quicksand-Regular.ttf);
+  font-family: quicksand;
+  src: url(../font/Quicksand-Regular.ttf);
 }
 @font-face {
-    font-family: quicksand-bold;
-    src: url(../font/Quicksand-Bold.ttf);
+  font-family: quicksand-bold;
+  src: url(../font/Quicksand-Bold.ttf);
 }
 @font-face {
-    font-family: quicksand-medium;
-    src: url(../font/Quicksand-Medium.ttf);
+  font-family: quicksand-medium;
+  src: url(../font/Quicksand-Medium.ttf);
 }
 @font-face {
-    font-family: reenie-beenie;
-    src: url(../font/ReenieBeanie-Regular.ttf);
+  font-family: reenie-beenie;
+  src: url(../font/ReenieBeanie-Regular.ttf);
 }
-.navbar_Kmart{
-    background-color: #FFF691 !important;
+.container-fluid {
+  background-color: #fff691 !important;
+  height: 73px;
 }
-a{
-    color:red !important;
-    text-decoration: none;
+.navbar {
+  background-color: #fff691 !important;
+}
+
+.navbar-brand {
+  color: #000;
+  font-size: 50px !important;
+  font-family: reenie-beenie;
+  text-align: center;
+}
+.fa-cart-shopping {
+  width: 50px;
+  float: right;
+  width: 100px;
+  height: 85px;
+}
+.fa-cart-shopping span {
+  display: block;
 }

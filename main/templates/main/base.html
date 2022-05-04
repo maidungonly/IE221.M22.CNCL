@@ -1,85 +1,99 @@
-<!-- base.html có thể tái sử dụng ở các page khác
 <!DOCTYPE html>
 <html lang="vi">
-
-<head>
+  <head>
     {% load static %}
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
- 
-    <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css"/>
-    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" />  
-    
-</head>
-
-<body>
-        <nav class="navbar navbar-expand-sm navbar-light bg-light">
-        
-          <a class="navbar-brand mb-0 h1" href="#">
-            <img src="https://getbootstrap.com//docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="50" height="50" class="d-inline-block align-top">
-            K-Mart
-          </a>
-          <div class="collapse navbar-collapse" id="navbarNav">
-              <ui class="navbar-nav">
-                  <li class="nav-item active">
-                      <a href="#" class="nav-link">
-                          Home
-                      </a>
-                      
-                  </li>
-                  <li class="nav-item active">
-                    <a href="#" class="nav-link">
-                        Contact
-                    </a>
-                    
-                </li>
-                <li class="nav-item active">
-                    <a href="#" class="nav-link">
-                        Bye
-                    </a>
-                    
-                </li>
-              </ui>
-
-
-          </div>
-        
-    </nav>
-
-    
-    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>  
-</body> -->
-<!DOCTYPE html>
-<html lang="vi">
-
-<head>
-    {% load static %}
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title%}{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     {% block linkcss%}{% endblock %}
-</head>
-    
-    <body>
-        <nav class="navbar navbar-light ">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">
-                <img src="{% static 'images\Authentic_Taste__2_-removebg-preview 1.svg' %}" alt="" width="50" height="50" class="d-inline-block align-text-top">
-                K-Mart
-              </a>
-            </div>
-        </nav>
+  </head>
 
- 
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+          <!-- Navbar brand -->
+          <a class="navbar-brand" href="#">K-Mart</a>
+      
+          <!-- Toggle button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+      
+          <!-- Collapsible wrapper -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <!-- Link -->
+              <!-- Dropdown -->
+              <li class="nav-item dropdown">
+                
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+      
+            
+            <!-- Search -->
+            <form class="me-5 d-flex flex-row">
+              <input
+                type="search"
+                class="form-control"
+                placeholder="Type query"
+                aria-label="Search"
+              />
+            </form>
+            <!-- Icons -->
+            <ul class="navbar-nav d-flex flex-row mx-auto">
+                <li class="nav-item me-3 me-lg-0">
+                  <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
+                </li>
+              
+              </ul>
+          </div>
+        </div>
+        <!-- Container wrapper -->
+      </nav>
+      <!-- Navbar -->
 
-
-        {% block linkjs %}
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        {% endblock %}
-    </body>
+    {% block linkjs %}
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    {% endblock %}
+  </body>
+</html>
