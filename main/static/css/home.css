@@ -30,10 +30,6 @@
     align-items: center;
     text-align: center;
 }
-h1{
-    padding: 20px;
-    font-size: 40px;
-}
 
 
 
@@ -44,4 +40,9 @@ h1{
 }
 .card{
     margin: 10px !important;
+}
+.link-sanpham{
+    text-decoration: none !important;
+    color: black;
+    font-family: quicksand;
 }

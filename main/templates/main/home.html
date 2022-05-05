@@ -1,3 +1,4 @@
+
 {% extends 'main/base.html' %} 
 {% load static %}
 
@@ -6,7 +7,6 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}" />
 
 {% endblock %} 
-{% block title%} Trang chủ K-Mart {% endblock %} 
 {% block images %}
 <img
   src="{%static 'images\banner.png' %}"
@@ -14,378 +14,331 @@
   alt=""
 />
 {% endblock %} 
+{% block title%}Trang chủ K-Mart{% endblock %} 
 {% block sanpham %}
-
-<!-- San pham ban chay -->
-<div class="sanphambanchay">
-<h1>Sản phẩm bán chạy</h1>
-<div class="card-group card-sanphambanchay">
-  <div class="card" style="max-width: 21rem">
-    <img
-      src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
-      class="card-img-top"
-      alt="..."
-    />
-    <div class="card-body">
-      <h5 class="card-title">Food Name</h5>
-      <p class="card-text">
-        50.000đ
-      </p>
-    </div>
-  </div>
-  <div class="card" style="max-width: 21rem">
-    <img
-      src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
-      class="card-img-top"
-      alt="..."
-    />
-    <div class="card-body">
-      <h5 class="card-title">Food Name</h5>
-      <p class="card-text">
-        50.000đ
-      </p>
-    </div>
-  </div>
-  <div class="card" style="max-width: 21rem">
-    <img
-      src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
-      class="card-img-top"
-      alt="..."
-    />
-    <div class="card-body">
-      <h5 class="card-title">Food Name</h5>
-      <p class="card-text">
-        50.000đ
-      </p>
-    </div>
-  </div>
-  <div class="card" style="max-width: 21rem">
-    <img
-      src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
-      class="card-img-top"
-      alt="..."
-    />
-    <div class="card-body">
-      <h5 class="card-title">Food Name</h5>
-      <p class="card-text">
-        50.000đ
-      </p>
-    </div>
-  </div>
-  <div class="card" style="max-width: 21rem">
-    <img
-      src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
-      class="card-img-top"
-      alt="..."
-    />
-    <div class="card-body">
-      <h5 class="card-title">Food Name</h5>
-      <p class="card-text">
-        50.000đ
-      </p>
-    </div>
-  </div>
-</div>
-</div>
-
-<div class="giavivasot"> 
-    <h1>Gia vị & Sốt</h1>
+<h5>hello</h5>
+<div class="sanpham-home">
+  <!-- San pham ban chay -->
+  <div class="sanphambanchay">
+    <a href="#" ><h1>Sản phẩm bán chạy</h1></a>
     <div class="card-group card-sanphambanchay">
-        <div class="card" style="max-width: 21rem">
-          <img
-            src="{%static 'images\giavisot.png' %}"
-            class="card-img-top giavisot-pic " 
-            alt="..."
-          />
-          <!-- <div class="card-body">
-            <h5 class="card-title">Food Name</h5>
-            <p class="card-text">
-              50.000đ
-            </p>
-          </div> -->
+      <div class="card" style="max-width: 21rem">
+        <img
+          src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Food Name</h5>
+          <p class="card-text">50.000đ</p>
         </div>
-        <div class="card" style="max-width: 21rem">
-          <img
-            src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title">Food Name</h5>
-            <p class="card-text">
-              50.000đ
-            </p>
-          </div>
-        </div>
-        <div class="card" style="max-width: 21rem">
-          <img
-            src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title">Food Name</h5>
-            <p class="card-text">
-              50.000đ
-            </p>
-          </div>
-        </div>
-        <div class="card" style="max-width: 21rem">
-          <img
-            src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title">Food Name</h5>
-            <p class="card-text">
-              50.000đ
-            </p>
-          </div>
-        </div>
-        
       </div>
-
-</div>
-
-<div class="banhkeo"> 
-    <h1>Bánh kẹo</h1>
-    <div class="card-group card-banhkeo">
-        <div class="card" style="max-width: 21rem">
-          <img
-            src="{%static 'images\banhkeo.png' %}"
-            class="card-img-top  " 
-            alt="..."
-          />
-          <!-- <div class="card-body">
-            <h5 class="card-title">Food Name</h5>
-            <p class="card-text">
-              50.000đ
-            </p>
-          </div> -->
+      <div class="card" style="max-width: 21rem">
+        <img
+          src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Food Name</h5>
+          <p class="card-text">50.000đ</p>
         </div>
-        <div class="card" style="max-width: 21rem">
-          <img
-            src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title">Food Name</h5>
-            <p class="card-text">
-              50.000đ
-            </p>
-          </div>
+      </div>
+      <div class="card" style="max-width: 21rem">
+        <img
+          src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Food Name</h5>
+          <p class="card-text">50.000đ</p>
         </div>
-        <div class="card" style="max-width: 21rem">
-          <img
-            src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title">Food Name</h5>
-            <p class="card-text">
-              50.000đ
-            </p>
+      </div>
+      <div class="card" style="max-width: 21rem">
+        <img
+          src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Food Name</h5>
+          <p class="card-text">50.000đ</p>
         </div>
+      </div>
+      <div class="card" style="max-width: 21rem">
+        <img
+          src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Food Name</h5>
+          <p class="card-text">50.000đ</p>
+        </div>
+      </div>
     </div>
-        <div class="card" style="max-width: 21rem">
-          <img
-            src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
+  </div>
+
+  <div class="giavivasot">
+    <a href="#"><h1>Gia vị & Sốt</h1></a>
+    <div class="card-group card-sanphambanchay">
+      <div class="card" style="max-width: 21rem">
+        <img
+          src="{%static 'images\giavisot.png' %}"
+          class="card-img-top giavisot-pic"
+          alt="..."
+        />
+        <!-- <div class="card-body">
             <h5 class="card-title">Food Name</h5>
             <p class="card-text">
               50.000đ
             </p>
-          </div>
-        </div>
-        
+          </div> -->
       </div>
+      <div class="card" style="max-width: 21rem">
+        <img
+          src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Food Name</h5>
+          <p class="card-text">50.000đ</p>
+        </div>
+      </div>
+      <div class="card" style="max-width: 21rem">
+        <img
+          src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Food Name</h5>
+          <p class="card-text">50.000đ</p>
+        </div>
+      </div>
+      <div class="card" style="max-width: 21rem">
+        <img
+          src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Food Name</h5>
+          <p class="card-text">50.000đ</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-</div>
+  <div class="banhkeo">
+    <a href="#"><h1>Bánh kẹo</h1></a>
+    <div class="card-group card-banhkeo">
+      <div class="card" style="max-width: 21rem">
+        <img
+          src="{%static 'images\banhkeo.png' %}"
+          class="card-img-top"
+          alt="..."
+        />
+        <!-- <div class="card-body">
+            <h5 class="card-title">Food Name</h5>
+            <p class="card-text">
+              50.000đ
+            </p>
+          </div> -->
+      </div>
+      <div class="card" style="max-width: 21rem">
+        <img
+          src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Food Name</h5>
+          <p class="card-text">50.000đ</p>
+        </div>
+      </div>
+      <div class="card" style="max-width: 21rem">
+        <img
+          src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Food Name</h5>
+          <p class="card-text">50.000đ</p>
+        </div>
+      </div>
+      <div class="card" style="max-width: 21rem">
+        <img
+          src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Food Name</h5>
+          <p class="card-text">50.000đ</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<div class="thucphamanlien"> 
-    <h1>Thực phẩm ăn liền</h1>
+  <div class="thucphamanlien">
+    <a href="#"><h1>Thực phẩm ăn liền</h1></a>
     <div class="card-group card-thucphamanlien">
-        <div class="card" style="max-width: 21rem">
-          <img
-            src="{%static 'images\anlien.png' %}"
-            class="card-img-top  " 
-            alt="..."
-          />
-          <!-- <div class="card-body">
+      <div class="card" style="max-width: 21rem">
+        <img
+          src="{%static 'images\anlien.png' %}"
+          class="card-img-top"
+          alt="..."
+        />
+        <!-- <div class="card-body">
             <h5 class="card-title">Food Name</h5>
             <p class="card-text">
               50.000đ
             </p>
           </div> -->
-        </div>
-        <div class="card" style="max-width: 21rem">
-          <img
-            src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title">Food Name</h5>
-            <p class="card-text">
-              50.000đ
-            </p>
-          </div>
-        </div>
-        <div class="card" style="max-width: 21rem">
-          <img
-            src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title">Food Name</h5>
-            <p class="card-text">
-              50.000đ
-            </p>
-          </div>
-        </div>
-        <div class="card" style="max-width: 21rem">
-          <img
-            src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title">Food Name</h5>
-            <p class="card-text">
-              50.000đ
-            </p>
-          </div>
-        </div>
-        
       </div>
+      <div class="card" style="max-width: 21rem">
+        <img
+          src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Food Name</h5>
+          <p class="card-text">50.000đ</p>
+        </div>
+      </div>
+      <div class="card" style="max-width: 21rem">
+        <img
+          src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Food Name</h5>
+          <p class="card-text">50.000đ</p>
+        </div>
+      </div>
+      <div class="card" style="max-width: 21rem">
+        <img
+          src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Food Name</h5>
+          <p class="card-text">50.000đ</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-</div>
-
-<div class="douong"> 
-    <h1>Đồ uống</h1>
+  <div class="douong">
+    <a href="#"><h1>Đồ uống</h1></a>
     <div class="card-group card-douong">
-        <div class="card" style="max-width: 21rem">
-          <img
-            src="{%static 'images\douong.png' %}"
-            class="card-img-top  " 
-            alt="..."
-          />
-          <!-- <div class="card-body">
+      <div class="card" style="max-width: 21rem">
+        <img
+          src="{%static 'images\douong.png' %}"
+          class="card-img-top"
+          alt="..."
+        />
+        <!-- <div class="card-body">
             <h5 class="card-title">Food Name</h5>
             <p class="card-text">
               50.000đ
             </p>
           </div> -->
-        </div>
-        <div class="card" style="max-width: 21rem">
-          <img
-            src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title">Food Name</h5>
-            <p class="card-text">
-              50.000đ
-            </p>
-          </div>
-        </div>
-        <div class="card" style="max-width: 21rem">
-          <img
-            src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title">Food Name</h5>
-            <p class="card-text">
-              50.000đ
-            </p>
-          </div>
-        </div>
-        <div class="card" style="max-width: 21rem">
-          <img
-            src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title">Food Name</h5>
-            <p class="card-text">
-              50.000đ
-            </p>
-          </div>
-        </div>
-        
       </div>
+      <div class="card" style="max-width: 21rem">
+        <img
+          src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Food Name</h5>
+          <p class="card-text">50.000đ</p>
+        </div>
+      </div>
+      <div class="card" style="max-width: 21rem">
+        <img
+          src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Food Name</h5>
+          <p class="card-text">50.000đ</p>
+        </div>
+      </div>
+      <div class="card" style="max-width: 21rem">
+        <img
+          src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Food Name</h5>
+          <p class="card-text">50.000đ</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-</div>
-
-<div class="rongbien"> 
-    <h1>Rong biển</h1>
+  <div class="rongbien">
+    <a href="#"><h1>Rong biển</h1></a>
     <div class="card-group card-rongbien">
-        <div class="card" style="max-width: 21rem">
-          <img
-            src="{%static 'images\rongbien.png' %}"
-            class="card-img-top  " 
-            alt="..."
-          />
-          <!-- <div class="card-body">
+      <div class="card" style="max-width: 21rem">
+        <img
+          src="{%static 'images\rongbien.png' %}"
+          class="card-img-top"
+          alt="..."
+        />
+        <!-- <div class="card-body">
             <h5 class="card-title">Food Name</h5>
             <p class="card-text">
               50.000đ
             </p>
           </div> -->
-        </div>
-        <div class="card" style="max-width: 21rem">
-          <img
-            src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title">Food Name</h5>
-            <p class="card-text">
-              50.000đ
-            </p>
-          </div>
-        </div>
-        <div class="card" style="max-width: 21rem">
-          <img
-            src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title">Food Name</h5>
-            <p class="card-text">
-              50.000đ
-            </p>
-          </div>
-        </div>
-        <div class="card" style="max-width: 21rem">
-          <img
-            src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title">Food Name</h5>
-            <p class="card-text">
-              50.000đ
-            </p>
-          </div>
-        </div>
-        
       </div>
-
+      <div class="card" style="max-width: 21rem">
+        <img
+          src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Food Name</h5>
+          <p class="card-text">50.000đ</p>
+        </div>
+      </div>
+      <div class="card" style="max-width: 21rem">
+        <img
+          src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Food Name</h5>
+          <p class="card-text">50.000đ</p>
+        </div>
+      </div>
+      <div class="card" style="max-width: 21rem">
+        <img
+          src="{%static 'images\noto-v1_shallow-pan-of-food.png' %}"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Food Name</h5>
+          <p class="card-text">50.000đ</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 {% endblock %}
