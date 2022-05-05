@@ -116,3 +116,16 @@ border-radius: 20px;
   display: flex;
   justify-content: center;
 }
+.footer{
+  text-align: center;
+  justify-items: center;
+  background-color: #fff691;
+  padding: 0;
+  max-height: 120px;
+  margin: 0;
+  font-size: 27px;
+  font-family: quicksand-bold;
+}
+.footer p{
+  margin: 0;
+}
