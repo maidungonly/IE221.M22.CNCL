@@ -24,6 +24,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.png' %}">
 
     {% block linkcss %}{% endblock %}
   </head>
@@ -33,8 +34,8 @@
      <nav class="navbar navbar-light navbar-first">
       <div class="container-fluid ">
       
-        <a class="navbar-brand" href="#">
-          <img src="{%static 'images\Authentic_Taste__2_-removebg-preview 1.svg' %}" alt=""  class="d-inline-block align-text-top">
+        <a class="navbar-brand" href="/home/">
+          <img src="{%static 'images\favicon-removebg-preview.png' %}" alt=""  class="d-inline-block align-text-top">
           K-Mart
         </a>
 
@@ -52,11 +53,12 @@
           </form>
         </div>
         <div class="navbar-cart col-md-3 ">
-          <i class="fa-solid fa-cart-shopping" ><span>Giỏ hàng</span></i>      
+          <a href="/giohang/"><i class="fa-solid fa-cart-shopping" ><span>Giỏ hàng</span></i>  </a>    
         </div>
     </nav>
     
     <!-- As a heading -->
+    {% block secondnav %}
     <nav class="navbar navbar-light navbar-second">
       <ul class="list-group list-group-horizontal navbar-second d-flex navbar-nav">
         <li class="list-group-item border-0"><a class="nav-link" href="#">Gia vị & Sốt</a></li>
@@ -64,10 +66,11 @@
         <li class="list-group-item border-0"><a class="nav-link" href="#">Bánh kẹo</a></li></li>
         <li class="list-group-item border-0"><a class="nav-link" href="#">Đồ uống</a></li></li>
         <li class="list-group-item border-0"><a class="nav-link" href="#">Rong biển</a></li></li>
-        <li class="list-group-item border-0"><a class="nav-link" href="#">Kcook</a></li></li>
+        <li class="list-group-item border-0"><a class="nav-link" href="/kcook/">Kcook</a></li></li>
     
       </ul>
     </nav>
+    {% endblock %}
 
     {% block images %}
 

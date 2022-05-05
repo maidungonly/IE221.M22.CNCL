@@ -1,0 +1,131 @@
+{% extends 'main/base.html' %} 
+{% load static %}
+
+
+{% block linkcss %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/giohang.css' %}" />
+
+{% endblock %} 
+
+{% block title%}Giỏ hàng{% endblock %} 
+{% block secondnav %}{% endblock %}
+{% block sanpham %}
+<div class="giohang">
+    <h1 class="text-center">
+        Giỏ hàng
+    </h1>
+<div class="container giohang-detail">
+    <div class="row justify-content-md-center row-tieude">
+        <div class="col-6">
+          Món hàng
+        </div>
+        <div class="col">
+          Số lượng
+        </div>
+        <div class="col">
+          Giá
+        </div>
+    </div>
+    
+
+    <div class="row justify-content-md-center row-giohang align-items-center">
+        <div class="col-3">
+            <img src="{%static 'images\giavisot.png' %}" alt=""  class="d-inline-block align-text-top">
+
+        </div>
+        <div class="col-3 ">
+
+            <p >Food Name</p>
+        </div>
+        <div class="col">
+            <i class="fa-solid fa-square-plus"></i>
+          1
+          <i class="fa-solid fa-square-minus"></i>
+        </div>
+        <div class="col">
+          100.000đ
+        </div>
+    </div>
+
+    <div class="row justify-content-md-center row-giohang align-items-center">
+        <div class="col-3">
+            <img src="{%static 'images\giavisot.png' %}" alt=""  class="d-inline-block align-text-top">
+
+        </div>
+        <div class="col-3 ">
+
+            <p >Food Name</p>
+        </div>
+        <div class="col">
+            <i class="fa-solid fa-square-plus"></i>
+          1
+          <i class="fa-solid fa-square-minus"></i>
+        </div>
+        <div class="col">
+          100.000đ
+        </div>
+    </div>
+
+    <div class="row justify-content-md-center row-giohang align-items-center">
+        <div class="col-3">
+            <img src="{%static 'images\giavisot.png' %}" alt=""  class="d-inline-block align-text-top">
+
+        </div>
+        <div class="col-3 ">
+
+            <p >Food Name</p>
+        </div>
+        <div class="col">
+            <i class="fa-solid fa-square-plus"></i>
+          1
+          <i class="fa-solid fa-square-minus"></i>
+        </div>
+        <div class="col">
+          100.000đ
+        </div>
+    </div>
+
+    <div class="row justify-content-md-center row-giohang align-items-center">
+        <div class="col-3">
+            <img src="{%static 'images\giavisot.png' %}" alt=""  class="d-inline-block align-text-top">
+
+        </div>
+        <div class="col-3 ">
+
+            <p >Food Name</p>
+        </div>
+        <div class="col">
+            <i class="fa-solid fa-square-plus"></i>
+          1
+          <i class="fa-solid fa-square-minus"></i>
+        </div>
+        <div class="col">
+          100.000đ
+        </div>
+    </div>
+
+    <div class="row justify-content-md-center row-tongcong">
+        <div class="col-6">
+          Tổng cộng
+        </div>
+        <div class="col">
+          4
+        </div>
+        <div class="col">
+          400.000đ
+        </div>
+    </div>
+
+    <div class="d-grid gap-2 col-5 ms-auto">
+        <button class="btn btn-primary btn-thanhtoan" type="button">
+            Thanh toán
+        </button>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+{% endblock %}

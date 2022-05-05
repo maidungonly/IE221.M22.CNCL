@@ -1,0 +1,60 @@
+@font-face {
+    font-family: quicksand-light;
+    src: url(../font/Quicksand-Light.ttf);
+  }
+  @font-face {
+    font-family: quicksand;
+    src: url(../font/Quicksand-Regular.ttf);
+  }
+  @font-face {
+    font-family: quicksand-bold;
+    src: url(../font/Quicksand-Bold.ttf);
+  }
+  @font-face {
+    font-family: quicksand-medium;
+    src: url(../font/Quicksand-Medium.ttf);
+  }
+  @font-face {
+    font-family: reenie-beenie;
+    src: url(../font/ReenieBeanie-Regular.ttf);
+  }
+
+.giohang h1{
+    padding: 50px;
+    font-size: 50px;
+    font-family: quicksand-bold;
+}
+.giohang-detail .row{
+    font-family: quicksand;
+    font-size: 25px;
+    border-bottom: 1px solid #4A4646;
+    text-align: center;
+}
+.row img{
+    max-width: 140px;
+    max-height: 140px;
+    min-width: 200px;
+    min-width: 200px;
+}
+
+.giohang-detail .row{
+    padding: 20px !important;
+}
+.giohang-detail .row-tongcong{
+    border-bottom: none ;
+    font-family: quicksand-bold;
+}
+.giohang-detail .row-tieude{
+font-family: quicksand-bold;
+}
+.giohang{
+    margin: 100px;
+}
+.giohang .btn-thanhtoan{
+    font-family: quicksand-bold;
+    font-size: 30px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 20px;
+    margin: 30px;
+}
