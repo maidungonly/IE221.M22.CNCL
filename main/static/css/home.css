@@ -41,8 +41,28 @@
 .card{
     margin: 10px !important;
 }
-.link-sanpham{
-    text-decoration: none !important;
+.sanpham-home a{
+    text-decoration: none ;
     color: black;
-    font-family: quicksand;
+    font-family: quicksand-bold;
+
+}
+.sanphambanchay{
+  margin: 20px;
+}
+.giavivasot{
+  margin: 20px;
+}
+.thucphamanlien {
+  margin: 20px;
+}
+.banhkeo{
+  margin: 20px;
+}
+.douong{
+  margin: 20px;
+
+}
+.rongbien{
+  margin: 20px;
 }
