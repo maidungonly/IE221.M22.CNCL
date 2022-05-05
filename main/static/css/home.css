@@ -1,0 +1,25 @@
+.img-banner{
+    padding: 10px;
+    width: 1600px;
+}
+.card-group{
+    padding: 30px !important;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+h1{
+    padding: 20px;
+    font-size: 40px;
+}
+
+
+
+.card-img-top {
+    width: 100%;
+    height: 17vw;
+    object-fit: cover;
+}
+.card{
+    margin: 10px !important;
+}

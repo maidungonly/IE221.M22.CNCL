@@ -18,19 +18,16 @@
   font-family: reenie-beenie;
   src: url(../font/ReenieBeanie-Regular.ttf);
 }
-.container-fluid {
-  background-color: #fff691 !important;
-  height: 73px;
-}
-.navbar {
-  background-color: #fff691 !important;
-}
 
 .navbar-brand {
   color: #000;
   font-size: 50px !important;
   font-family: reenie-beenie;
   text-align: center;
+}
+.navbar-brand img {
+  width: 60px;
+  height: 60px;
 }
 .fa-cart-shopping {
   width: 50px;
@@ -40,4 +37,81 @@
 }
 .fa-cart-shopping span {
   display: block;
+}
+
+.navbar-first{
+  background: #fff691;
+  padding: 5px 0;
+  transition: 0.5s all;
+}
+
+.navbar-brand {
+  padding: 5px;
+}
+.container-fluid {
+  width: 2000px;
+}
+.TC-navbar .container-fluid {
+  background: #fff691 !important;
+  padding: 5px 20px;
+}
+
+
+.navbar-nav input {
+  background: #fff !important;
+  border-radius: 100px;
+  border: 2px solid #fff;
+  text-indent: 33px;
+  color: gray !important;
+  width: 500px !important;
+  height: 50px;
+  font-size: 20px;
+  float: right;
+  font-family: quicksand;
+}
+.icon-search {
+  position: absolute;
+  color: #000;
+  margin-top: 15px;
+  margin-left: 135px;
+  font-size: 20px;
+}
+.navbar-cart {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  font-size: 30px;
+}
+.fa-cart-shopping {
+  padding-top: 15px;
+  vertical-align: middle;
+  align-items: center;
+}
+.fa-cart-shopping span {
+  font-family: quicksand;
+  font-size: 20px;
+  align-items: center;
+}
+
+.navbar-second {
+  color: #000;
+}
+.list-group-item {
+  
+  font-family: quicksand;
+  color: #000;
+}
+.nav-link{
+  font-family: quicksand-bold;
+  text-decoration: none;
+  color: #000 !important;
+  border: none  !important;
+}
+
+.img-banner{
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }

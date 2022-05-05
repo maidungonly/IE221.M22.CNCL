@@ -25,69 +25,56 @@
       referrerpolicy="no-referrer"
     />
 
-    {% block linkcss%}{% endblock %}
+    {% block linkcss %}{% endblock %}
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <!-- Container wrapper -->
-        <div class="container-fluid">
-          <!-- Navbar brand -->
-          <a class="navbar-brand" href="#">K-Mart</a>
+    
+     <nav class="navbar navbar-light navbar-first">
+      <div class="container-fluid ">
       
-          <!-- Toggle button -->
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-mdb-toggle="collapse"
-            data-mdb-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <i class="fas fa-bars"></i>
-          </button>
-      
-          <!-- Collapsible wrapper -->
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <!-- Link -->
-              <!-- Dropdown -->
-              <li class="nav-item dropdown">
-                
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-            </ul>
-      
-            
-            <!-- Search -->
-            <form class="me-5 d-flex flex-row">
-              <input
-                type="search"
-                class="form-control"
-                placeholder="Type query"
-                aria-label="Search"
-              />
-            </form>
-            <!-- Icons -->
-            <ul class="navbar-nav d-flex flex-row mx-auto">
-                <li class="nav-item me-3 me-lg-0">
-                  <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
-                </li>
-              
-              </ul>
-          </div>
-        </div>
-        <!-- Container wrapper -->
-      </nav>
-      <!-- Navbar -->
+        <a class="navbar-brand" href="#">
+          <img src="{%static 'images\Authentic_Taste__2_-removebg-preview 1.svg' %}" alt=""  class="d-inline-block align-text-top">
+          K-Mart
+        </a>
 
+        <div class="navbar-nav col-md-5 ms-auto ">
+          
+          <form>
+            <input
+              type="text"
+              name="user"
+              class="form-control"
+              id="Searchbox"
+              placeholder="Tìm kiếm đồ ăn..."
+            />
+            <!-- <i class="fas fa-search icon-search"></i> -->
+          </form>
+        </div>
+        <div class="navbar-cart col-md-3 ">
+          <i class="fa-solid fa-cart-shopping" ><span>Giỏ hàng</span></i>      
+        </div>
+    </nav>
+    
+    <!-- As a heading -->
+    <nav class="navbar navbar-light navbar-second">
+      <ul class="list-group list-group-horizontal navbar-second d-flex navbar-nav">
+        <li class="list-group-item border-0"><a class="nav-link" href="#">Gia vị & Sốt</a></li>
+        <li class="list-group-item border-0"><a class="nav-link" href="#">Thực phẩm ăn liền</a></li>
+        <li class="list-group-item border-0"><a class="nav-link" href="#">Bánh kẹo</a></li></li>
+        <li class="list-group-item border-0"><a class="nav-link" href="#">Đồ uống</a></li></li>
+        <li class="list-group-item border-0"><a class="nav-link" href="#">Rong biển</a></li></li>
+        <li class="list-group-item border-0"><a class="nav-link" href="#">Kcook</a></li></li>
+    
+      </ul>
+    </nav>
+
+    {% block images %}
+
+    {% endblock %}
+    
+    {% block sanpham %}
+    {% endblock %}
     {% block linkjs %}
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
