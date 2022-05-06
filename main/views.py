@@ -66,3 +66,5 @@ def chitietkcook(response):
 def thongtinmh(response):
     return render(response,"main/thongtinmh.html",{})
 
+def chitietsanpham(response):
+    return render(response,"main/chitietsanpham.html",{})

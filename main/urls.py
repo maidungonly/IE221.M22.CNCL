@@ -13,5 +13,6 @@ urlpatterns = [
     path("thucphamanlien/",views.thucphamanlien,name="thucphamanlien"),
     path("kcook/chitietkcook/", views.chitietkcook, name="chitietkcook"),
     path("thongtinmuahang/", views.thongtinmh, name="thongtinmuahang"),
+    path("chitietsanpham/", views.chitietsanpham, name="chitietsanpham"),
 ]
  

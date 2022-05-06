@@ -1,0 +1,85 @@
+@font-face {
+    font-family: quicksand-light;
+    src: url(../font/Quicksand-Light.ttf);
+}
+
+@font-face {
+    font-family: quicksand;
+    src: url(../font/Quicksand-Regular.ttf);
+}
+
+@font-face {
+    font-family: quicksand-bold;
+    src: url(../font/Quicksand-Bold.ttf);
+}
+
+@font-face {
+    font-family: quicksand-medium;
+    src: url(../font/Quicksand-Medium.ttf);
+}
+
+@font-face {
+    font-family: reenie-beenie;
+    src: url(../font/ReenieBeanie-Regular.ttf);
+}
+h1, h6, .chitiet_header{
+    padding-left: 60px;
+} 
+h1{
+    font-family: quicksand-bold;
+}
+h6{
+    font-family: quicksand-medium;
+}
+.chitiet_header {
+    font-family: quicksand;
+    display: grid;
+    grid-template-columns: 400px  400px;
+}
+.ptc_giavisot{
+    height: 250px;
+    width: 400px;
+    padding-top: 20px;
+    padding-left: 30px;
+}
+.thongtin_header{
+    padding-left: 70px;
+}
+h2{
+    padding-top: 10px;
+    font-family: quicksand-bold;
+}
+h3{
+    padding-top: 30px;
+    font-family: quicksand-bold;
+    color: #D70000;
+}
+.themgh_btn, .muangay_btn{
+   border: 0.5px solid rgb(255, 255, 255);
+   font-family: quicksand-bold;
+   height: 45px;
+   border-radius: 8px;
+   margin-right: 10px;
+   margin-top: 80px;
+}
+.themgh_btn{
+    background-color: #FCF58B;
+    width: 170px;
+}
+.muangay_btn{
+    background-color:#F18958;
+    width: 100px;
+}
+.header_mota{
+    padding-left:60px;
+    padding-top: 30px;
+    font-size: 30px;
+}
+.p_noidung{
+    padding-left:60px;
+    padding-right: 60px;
+    border: 1px solid black;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 10px;
+}
