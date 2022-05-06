@@ -53,3 +53,9 @@ def giohang(response):
 
 def kcook(response):
     return render(response,"main/kcook.html",{})
+def giavisot(response):
+    return render(response,"main/giavisot.html",{})
+
+
+def thucphamanlien(response):
+    return render(response,"main/thucphamanlien.html",{})

@@ -9,5 +9,8 @@ urlpatterns = [
     # path("create/",views.create,name="create"),
     path("giohang/",views.giohang,name="giohang"),
     path("kcook/",views.kcook,name="kcook"),
+    path("giavisot/",views.giavisot,name="giavisot"),
+    path("thucphamanlien/",views.thucphamanlien,name="thucphamanlien"),
+
 ]
  
