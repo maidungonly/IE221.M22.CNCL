@@ -76,10 +76,10 @@ h3{
     font-size: 30px;
 }
 .p_noidung{
-    padding-left:60px;
-    padding-right: 60px;
+    padding-left:40px;
+    padding-right: 40px;
     border: 1px solid black;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 180px;
+    margin-right: 180px;
     border-radius: 10px;
 }
