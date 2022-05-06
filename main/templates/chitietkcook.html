@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %} 
+{% load static %}
+
+
+{% block linkcss %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/chitietkcook.css' %}" />
+
+{% endblock %} 
+
+{% block title%} Cùng làm thử Bibimbab nào! {% endblock %}
+
+{% block images %}
+<div class="kcook-image">
+    <img
+        src="{%static 'images\kcook-post.png' %}"
+        <!-- class="img-fluid img-banner mx-auto d-block"
+        alt="" -->
+    />
+</div>
+{% endblock %} 
+

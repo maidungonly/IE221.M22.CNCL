@@ -59,3 +59,6 @@ def giavisot(response):
 
 def thucphamanlien(response):
     return render(response,"main/thucphamanlien.html",{})
+
+def chitietkcook(response):
+    return render(response,"main/chitietkcook.html",{})

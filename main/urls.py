@@ -11,6 +11,6 @@ urlpatterns = [
     path("kcook/",views.kcook,name="kcook"),
     path("giavisot/",views.giavisot,name="giavisot"),
     path("thucphamanlien/",views.thucphamanlien,name="thucphamanlien"),
-
+    path("kcook/chitietkcook/", views.chitietkcook, name="chitietkcook"),
 ]
  
