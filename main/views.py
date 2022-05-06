@@ -62,3 +62,7 @@ def thucphamanlien(response):
 
 def chitietkcook(response):
     return render(response,"main/chitietkcook.html",{})
+
+def thongtinmh(response):
+    return render(response,"main/thongtinmh.html",{})
+

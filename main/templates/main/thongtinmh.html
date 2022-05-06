@@ -1,0 +1,28 @@
+{% extends 'main/base.html' %} 
+{% load static %}
+
+{% block linkcss %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/thongtinmh.css' %}" />
+
+{% endblock %} 
+{% block title%} Thông tin mua hàng {% endblock %} 
+
+{% block tieude %}
+<h1 class="header-h1">Thông tin mua hàng</h1>
+{% endblock %}
+
+{% block sanpham %}
+<form class="thongtin">
+   <h6>1. Họ và tên*:</h6>
+   <input type="text" name="fullname" placeholder="Nhập họ và tên" class="input_"> <br>
+   <h6>2. Số điện thoại*:</h6>
+   <input type="text" name="telephonenumbers" placeholder="Nhập SĐT" class="input_"> <br>
+   <h6>3. Địa chỉ nhận hàng*:</h6>
+   <input type="text" name="address" placeholder="Nhập địa chỉ nhận hàng" class="input_">
+   <h6>4. Hình thức thanh toán*:</h6>
+    <input type="radio" name="thanhtoan" value="Thanh toán khi nhận hàng" class="thanhtoan"><span>Thanh toán khi nhận hàng</span> <br>
+    <input type="radio" name="thanhtoan" value="Chuyển khoản ngân hàng" class="thanhtoan"><span>Chuyển khoản ngân hàng</span><br>
+   <input type="submit" value="Tiến hành đặt hàng" class="btn_dathang">
+</form>
+
+{% endblock %}

@@ -7,15 +7,54 @@
 
 {% endblock %} 
 
-{% block title%} Cùng làm thử Bibimbab nào! {% endblock %}
+{% block title%} Cùng làm thử Bibimbap nào! {% endblock %}
+
+{% block tieude %}
+<h2 class = "kcook-h2">CÙNG LÀM THỬ BIBIMBAP NÀO!</h2>
+{% endblock %}
 
 {% block images %}
 <div class="kcook-image">
     <img
         src="{%static 'images\kcook-post.png' %}"
-        <!-- class="img-fluid img-banner mx-auto d-block"
-        alt="" -->
+        class="img-fluid img-banner mx-auto d-block"
+        alt=""
     />
 </div>
 {% endblock %} 
+
+{% block sanpham %}
+<div class="nguyenlieu">
+    <h2>Nguyên liệu</h2>
+    <p class="chitiet">
+        Gạo, Cà rốt, Nấm đông cô, Cải bó xôi, Giá đỗ, Bí ngòi, Kim chi cải thảo, Thịt bò, Trứng gà <br>
+        Gia vị: dầu ăn, muối, đường, hạt nêm, bột ngọt, tiêu, nước tương, dầu mè Hàn Quốc, tương ớt Hàn Quốc, vừng rang, tỏi.
+    </p>
+</div>
+<div class="cachlam">
+    <h2>Cách làm</h2>
+    <p class="chitiet">
+        Bước 1: Vo gạo nấu cơm.<br>
+
+        Bước 2: Làm nước sốt cho cơm trộn Hàn Quốc ngon đúng điệu
+        
+        Cho tất cả nguyên liệu vào một cái bát: 2 muỗng tương ớt Hàn Quốc làm cơm trộn, 1 muỗng dầu mè, 1/2 muỗng nước tương Hàn Quốc, 1 muỗng đường, 1/4 muỗng hạt tiêu, 2 muỗng vừng rang. Bạn khuấy đều cho đến khi nước sốt mịn là được.<br>
+        
+        Bước 3: Thịt bò rửa sạch, thái lát mỏng, ướp với 1 muỗng tỏi băm, 1/2 muỗng nước tương Hàn Quốc, 1/2 muỗng dầu mè, 1/2 muỗng canh đường, 1/4 muỗng hạt tiêu. Ướp thịt bò cùng gia vị trong 15 phút.<br>
+        
+        Trong lúc chờ thịt bò ngấm gia vị, bạn tận dụng thời gian để sơ chế (nhặt và rửa sạch) các loại rau củ nhé!<br>
+        
+        Sau 15 phút, bạn lấy thịt bò ra xào với 1 muỗng dầu ăn cho đến khi săn lại. Bạn đừng xào thịt bò kĩ quá không sẽ bị dai đó.<br>
+        
+        Bước 4: Bắc một nồi nước, khi nước sôi thì cho lần lượt giá đỗ và cải bó xôi vào trần qua. Để riêng từng loại rau ra các đĩa khác nhau và ướp với một ít muối, dầu mè.<br>
+        
+        Bước 5: Cà rốt thái sợi và cho vào chảo xào với 1 muỗng dầu ăn. Xào cà rốt chín thì bỏ ra đĩa ướp với 1 chút dầu mè, muối.<br>
+        
+        Bước 6: Bí ngòi, nấm đông cô mang ra cắt lát mỏng rồi xào lần lượt từng loại 1, và làm tương tự như cà rốt ở bước 5.<br>
+        
+        Bước 7: Trứng gà cho vào chảo, ốp la lên.<br>
+    </p>
+</div>
+
+{% endblock %}
 
