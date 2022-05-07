@@ -5,24 +5,51 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/thongtinmh.css' %}" />
 
 {% endblock %} 
+{% block secondnav %} {% endblock %}
+
 {% block title%} Thông tin mua hàng {% endblock %} 
 
 {% block tieude %}
-<h1 class="header-h1">Thông tin mua hàng</h1>
+<h1 class="text-center thongtinmuahang-title">Thông tin mua hàng</h1>
 {% endblock %}
 
 {% block sanpham %}
-<form class="thongtin">
-   <h6>1. Họ và tên*:</h6>
-   <input type="text" name="fullname" placeholder="Nhập họ và tên" class="input_"> <br>
-   <h6>2. Số điện thoại*:</h6>
-   <input type="text" name="telephonenumbers" placeholder="Nhập SĐT" class="input_"> <br>
-   <h6>3. Địa chỉ nhận hàng*:</h6>
-   <input type="text" name="address" placeholder="Nhập địa chỉ nhận hàng" class="input_">
-   <h6>4. Hình thức thanh toán*:</h6>
-    <input type="radio" name="thanhtoan" value="Thanh toán khi nhận hàng" class="thanhtoan"><span>Thanh toán khi nhận hàng</span> <br>
-    <input type="radio" name="thanhtoan" value="Chuyển khoản ngân hàng" class="thanhtoan"><span>Chuyển khoản ngân hàng</span><br>
-   <input type="submit" value="Tiến hành đặt hàng" class="btn_dathang">
-</form>
+<form  class="was-validated form-muahang">
+   <div class="mb-3 ">
+     <label for="hovaten" class="form-label">1. Họ và Tên</label>
+     <input type="text" class="form-control form-control-lg" id="hovaten" placeholder="Hãy nhập Họ và Tên" name="hovaten" required>
+     <div class="valid-feedback">Valid.</div>
+     <div class="invalid-feedback">Hãy điền đầy đủ thông tin</div>
+   </div>
+   <div class="mb-3">
+     <label for="sdt" class="form-label">2. Số điện thoại</label>
+     <input type="text" class="form-control form-control-lg" id="sdt" placeholder="Hãy nhập Số điện thoại" name="sdt" required>
+     <div class="valid-feedback">Valid.</div>
+     <div class="invalid-feedback">Hãy điền đầy đủ thông tin</div>
+   </div>
+
+   <div class="mb-3">
+      <label for="email" class="form-label">2. Email</label>
+      <input type="email" class="form-control form-control-lg" id="email" placeholder="Hãy nhập Email" name="email" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Hãy điền đầy đủ thông tin</div>
+    </div>
+    <label for="" class="mb-3">4. Hình thức thanh toán</label>
+    <div class="form-check mb-3">
+      <input class="form-check-input" type="radio" name="thanhtoan" id="thanhtoankhinhanhang">
+      <label class="form-check-label" for="thanhtoankhinhanhang">
+        Thanh toán khi nhận hàng
+      </label>
+    </div>
+    <div class="form-check mb-3">
+      <input class="form-check-input" type="radio" name="thanhtoan" id="thanhtoanonline" checked>
+      <label class="form-check-label" for="thanhtoanonline">
+        Thanh toán chuyển khoản
+      </label>
+    </div>
+    <div class="d-grid gap-2 col-4 mx-auto mt-5">
+         <button type="submit" class="btn btn-primary btn-lg btn-nopform">Gửi</button>
+    </div>
+ </form>
 
 {% endblock %}

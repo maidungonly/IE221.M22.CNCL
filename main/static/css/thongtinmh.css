@@ -23,44 +23,33 @@
     src: url(../font/ReenieBeanie-Regular.ttf);
 }
 
-.header-h1{
+.thongtinmuahang-title{
+    padding-top: 30px;
+    font-size: 50px;
     font-family: quicksand-bold;
-    text-align: center;
 }
-.thongtin{
-    padding-left: 250px;
-    padding-right:250px;
+.form-muahang{
+    padding-top: 100px;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 150px;
+    font-family: quicksand-bold;
+    font-size: 27px;
 }
-.input_{
-    width:90%;
-    border-radius: 10px;
-    border: 0.5px solid rgb(79, 79, 79);
-    height: 35px;
+.form-check label{
+    color: black !important;
+}
+.form-control{
+    border-radius: 15px !important;
+}
+.form-check label{
     font-family: quicksand;
-    padding-left: 10px;
 }
-h6{
-    padding-bottom: 4px;
-    padding-top: 10px;
-    font-family: quicksand-bold;
-}
-.thanhtoan{
-    font-family: quicksand;
-    padding-bottom: 5px;
-}
-span{
-    font-family: quicksand-medium;
-    padding-left:5px;
-    padding-bottom: 5px;
-}
-.btn_dathang{
-    height: 40px;
-    width: 300px;
-    margin: 20px;
-    position: relative;
-    left: 220px;
-    border: 0.5px solid #FFA726;
-    border-radius: 10px;
-    font-family: quicksand-bold;
+.form-muahang .btn-nopform{
+    color: #000;
+    border-radius: 20px;
     background-color: #FFA726;
+    border-color: #FFA726;
+    font-size: 32px;
+
 }
