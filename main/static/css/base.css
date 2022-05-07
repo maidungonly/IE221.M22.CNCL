@@ -18,10 +18,10 @@
   font-family: reenie-beenie;
   src: url(../font/ReenieBeanie-Regular.ttf);
 }
-/* *{
+*{
   box-sizing: border-box;
   
-} */
+}
 .navbar-brand {
   color: #000;
   font-size: 50px !important;
@@ -129,11 +129,7 @@ border-radius: 20px;
   font-size: 27px;
   font-family: quicksand-bold;
 }
-.footer p{
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 50px;
+.footer h5{
+ margin: 0;
+ margin-bottom: 0 !important;
 }
