@@ -20,6 +20,7 @@ class KcookPost(models.Model):
     nguyenlieu = models.TextField()
     introduction = models.CharField(max_length=350,null=True)
     cachlam = models.TextField()
+    # slug =models.SlugField(unique=True,blank=True)
 
     def __str__(self):
         return self.title_post

@@ -3,4 +3,8 @@ from .models import KcookPost
 
 # Register your models here.
 
-admin.site.register(KcookPost)
+class KcookPostAdmin(admin.ModelAdmin):
+    list_display = ('id','title_post','image','nguyenlieu','introduction','cachlam')
+
+
+admin.site.register(KcookPost,KcookPostAdmin)

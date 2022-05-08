@@ -25,23 +25,24 @@
     </h1>
     <div class="container kcook-post" >
         <div class="row">
+            {% if data %}
+                {% for cat in data %}
             <div class="col-lg-4 col-md-12 col-sm-12">
                 <img
-                    src="{%static 'images\kcook-post.png' %}"
+                    src="/media/{{cat.image}}"
                     class="img-fluid img-banner mx-auto d-block "
                     alt=""
                     />
             </div>
             <div class="col-lg-8 col-md-12 col-sm-12 kcook-post-text">
-                <a href="#"><h2>CÙNG LÀM THỬ BIBIMBAP NÀO!</h2></a>
-                <p>Không chỉ có làn sóng Hallyu của Hàn Quốc, đã gây ảnh hưởng mạnh đến giới trẻ Việt Nam. Mà, ấm thực
-                    xứ Hàn cũng vô cùng cuốn hút giới trẻ. Một trong những món ăn, quen thuộc nhất của Hàn Quốc nối tiếng
-                    ngon đó là Bibimbap (Cơm trộn Hàn Quốc). Đây là, món ăn khá phổ biến và đặc biệt dễ làm. 
-                </p>
+                <a href="/kcook-post-list/{{cat.id}}"><h2>{{cat.title_post}}</h2></a>
+                <p>{{cat.introduction}}</p>
             </div>
+                {% endfor %}
+            {% endif %}
         </div>
 
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-lg-4 col-md-12 col-sm-12">
                 <img
                     src="{%static 'images\kcook-post.png' %}"
@@ -56,8 +57,8 @@
                     ngon đó là Bibimbap (Cơm trộn Hàn Quốc). Đây là, món ăn khá phổ biến và đặc biệt dễ làm. 
                 </p>
             </div>
-        </div>
-        <div class="row">
+        </div> -->
+        <!-- <div class="row">
             <div class="col-lg-4 col-md-12 col-sm-12">
                 <img
                     src="{%static 'images\kcook-post.png' %}"
@@ -72,8 +73,8 @@
                     ngon đó là Bibimbap (Cơm trộn Hàn Quốc). Đây là, món ăn khá phổ biến và đặc biệt dễ làm. 
                 </p>
             </div>
-        </div>
-        <div class="row">
+        </div> -->
+        <!-- <div class="row">
             <div class="col-lg-4 col-md-12 col-sm-12 kcook-post-text">
                 <img
                     src="{%static 'images\kcook-post.png' %}"
@@ -88,8 +89,8 @@
                     ngon đó là Bibimbap (Cơm trộn Hàn Quốc). Đây là, món ăn khá phổ biến và đặc biệt dễ làm. 
                 </p>
             </div>
-        </div>
-        <div class="row">
+        </div> -->
+        <!-- <div class="row">
             <div class="col-xl-4 col-md-12 col-sm-12">
                 <img
                     src="{%static 'images\kcook-post.png' %}"
@@ -104,7 +105,7 @@
                     ngon đó là Bibimbap (Cơm trộn Hàn Quốc). Đây là, món ăn khá phổ biến và đặc biệt dễ làm. 
                 </p>
             </div>
-        </div>
+        </div> -->
 
         <div class="d-grid gap-2 col-4 ms-auto">
             <p class="btn btn-xemtiep" type="button">

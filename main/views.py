@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
+from .models import KcookPost
 
 # def index(response,id):
 #     ls = ToDoList.objects.get(id = id)
@@ -51,7 +52,16 @@ def giohang(response):
     return render(response,"main/giohang.html",{})
 
 def kcook(response):
-    return render(response,"main/kcook.html",{})
+    data = KcookPost.objects.all().order_by('-id')
+    return render(response,"main/kcook.html",{'data':data})
+
+def chitietkcook(response,id):
+    kcook_post = KcookPost.objects.get(id=id)
+    # kcook_post = KcookPost.objects.get(id = kcook_post_id)
+    # data=KcookPost.objects.filter(id=kcook_post).order_by('-id')
+    return render(response,"main/chitietkcook.html",{'data':kcook_post})
+
+
 def giavisot(response):
     return render(response,"main/giavisot.html",{})
 
@@ -59,8 +69,7 @@ def giavisot(response):
 def thucphamanlien(response):
     return render(response,"main/thucphamanlien.html",{})
 
-def chitietkcook(response):
-    return render(response,"main/chitietkcook.html",{})
+
 
 def thongtinmh(response):
     return render(response,"main/thongtinmh.html",{})
