@@ -24,3 +24,8 @@ class KcookPost(models.Model):
     def __str__(self):
         return self.title_post
 
+# class Product(models.Model):
+#     slug = models.SlugField(unique=True, blank=True)
+
+
+
