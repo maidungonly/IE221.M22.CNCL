@@ -8,30 +8,33 @@
 {% block title%} Chi tiết sản phẩm {% endblock %}
 
 {% block tieude %}
-<h1 class="header-h1">Chi tiết sản phẩm</h1>
-<h6>Thực phẩm ăn liền > Bánh gạo cay</h6>
+<h1 class="chitietsanpham-title">Chi tiết sản phẩm</h1>
+<p class="chitietsanpham-navigate">Thực phẩm ăn liền > Bánh gạo cay</p>
 {% endblock %}
 
 {% block sanpham %}
 <div class="chitiet_header">
-    <div>
-        <img src="{%static 'images\giavisot.png'%}" class="ptc_giavisot" />
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <img src="{%static 'images\giavisot.png'%}" class="img-fluid img-banner mx-auto d-block" />
+
+        </div>
+        <div class="col-12 col-md-6 price-foodname">
+            <p>Food name</p>
+            <h3>100.000đ</h3>
+            <button type="button" class="btn btn-primary themvaogio-btn btn-lg">Thêm vào giỏ hàng</button>
+            <button type="button" class="btn btn-primary muangay-btn btn-lg">Mua ngay</button>
+
+        </div>
     </div>
-    <div class="thongtin_header">
-        <h2>Food name</h2>
-        <h3>100.000đ</h3>
-        <button name="button" type="button" class="themgh_btn">Thêm vào giỏ hàng</button>
-        <button name="button" type="button" class="muangay_btn">Mua ngay</button>
-    </div>
+    
 </div>
 
 <div class="mota">
-<h2 class="header_mota">Mô tả sản phẩm</h2>
-<pre class="p_noidung">
-    Em cần được chữa lành tâm hồn sau vụ cá Koi :((
-Hai năm trước xem chương trình STT cực kì ngưỡng mộ người vợ tào khang ấy, bây giờ xem lại mắt rưng rưng.
-Gái có công, chồng vẫn phụ!!! Sự nghèo khó của đàn ông thử thách trái tim phụ nữ, còn sự giàu có lại thử thách chính bản thân anh ta. Rõ là: "Ở đời, đâu có cô gái hay người thứ ba nào xuất hiện khi chồng người ta đang lập nghiệp, đang khó khăn, đang không có xu dính túi đâu.”
-</pre>
+    <h2 class="header_mota">Mô tả sản phẩm</h2>
+    <p class="p_noidung">Em cần được chữa lành tâm hồn sau vụ cá Koi :((
+    Hai năm trước xem chương trình STT cực kì ngưỡng mộ người vợ tào khang ấy, bây giờ xem lại mắt rưng rưng.
+    Gái có công, chồng vẫn phụ!!! Sự nghèo khó của đàn ông thử thách trái tim phụ nữ, còn sự giàu có lại thử thách chính bản thân anh ta. Rõ là: "Ở đời, đâu có cô gái hay người thứ ba nào xuất hiện khi chồng người ta đang lập nghiệp, đang khó khăn, đang không có xu dính túi đâu.”</p>
 </div>
 
 

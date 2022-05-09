@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
-from .models import KcookPost
+from .models import KcookPost,Product
 
 # def index(response,id):
 #     ls = ToDoList.objects.get(id = id)
@@ -29,7 +29,9 @@ from .models import KcookPost
 
 
 def home(response):
-    return render (response,"main/home.html",{})
+    data = Product.objects.all().order_by('-id')
+
+    return render (response,"main/home.html",{'data':data})
 
 
 def base(response):
