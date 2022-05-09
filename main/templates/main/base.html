@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html lang="vi">
-  <head>
-    {% load static %}
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{% block title%}{% endblock %}</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
-    <link
-      rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon-removebg-preview.png' %}">
 
-    {% block linkcss %}{% endblock %}
-  </head>
+<head>
+  {% load static %}
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title%}{% endblock %}</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" type="image/x-icon" href="{% static 'images/favicon-removebg-preview.png' %}">
 
-  <body>
-    
-     <nav class="navbar navbar-light navbar-first">
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/
+bootstrap/4.0.0/css/bootstrap.min.css" <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/
+jquery.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/
+popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn. bootstrapcdn.com/bootstrap/4.0.0/js/
+bootstrap.min.js"></script>
+
+  {% block linkcss %}{% endblock %}
+</head>
+
+<body>
+
+  <!-- <nav class="navbar navbar-light navbar-first">
       <div class="container-fluid ">
       
         <a class="navbar-brand" href="/home/">
@@ -49,55 +50,103 @@
               id="Searchbox"
               placeholder="Tìm kiếm đồ ăn..."
             />
-            <!-- <i class="fas fa-search icon-search"></i> -->
           </form>
         </div>
         <div class="navbar-cart col-md-3 ">
           <a href="/giohang/"><i class="fa-solid fa-cart-shopping" ><span>Giỏ hàng</span></i>  </a>    
         </div>
-    </nav>
-    
-    <!-- As a heading -->
-    {% block secondnav %}
-    <nav class="navbar navbar-light navbar-second">
-      <ul class="list-group list-group-horizontal navbar-second d-flex navbar-nav">
-        <li class="list-group-item border-0"><a class="nav-link" href="/giavisot/">Gia vị & Sốt</a></li>
-        <li class="list-group-item border-0"><a class="nav-link" href="/thucphamanlien/">Thực phẩm ăn liền</a></li>
-        <li class="list-group-item border-0"><a class="nav-link" href="#">Bánh kẹo</a></li></li>
-        <li class="list-group-item border-0"><a class="nav-link" href="#">Đồ uống</a></li></li>
-        <li class="list-group-item border-0"><a class="nav-link" href="#">Rong biển</a></li></li>
-        <li class="list-group-item border-0"><a class="nav-link" href="/kcook/">Kcook</a></li></li>
-    
+    </nav> -->
+  <nav class="navbar navbar-expand-md navbar-dark" style="background-color:#FFD63F;">
+    <a class="navbar-brand" href="/home/" style="color:black">
+      <img src="{%static 'images\favicon-removebg-preview.png' %}" alt="" class="d-inline-block align-text-top">K-Mart
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="
+        collapse" data-target="#navbarSuppportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav md-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/giavisot/">Gia vị & Sốt</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/thucphamanlien/">Thực phẩm ăn liền</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Bánh kẹo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Đồ uống</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Rong biển</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/kcook/">Kcook</a>
+        </li>
       </ul>
-    </nav>
-    {% endblock %}
-
-    {% block tieude %}
-
-    {% endblock %}
-    
-    {% block images %}
-
-    {% endblock %}
-    
-    {% block sanpham %}
-    {% endblock %}
-    {% block linkjs %}
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-    {% endblock %}
-
-
-    {% block footer %}
-    <div class="footer">
-      <img src="{%static 'images\footer-icon.png' %}" alt=""  class="d-inline-block align-text-top">
-      <h5>@Copyrights belongs to Nhóm 15</h5>
-
+      <form class="d-flex">
+        <input class="form-control mr-sm-1" type="search" placeholder="Tìm kiếm sản phẩm..." aria-label="Search">
+        <button class="btn btn-light my-sm-0" type="submit">Tìm kiếm</button>
+      </form>    
+      <div class="navbar-cart col-md-0 ">
+        <a href="/giohang/"><i class="fa-solid fa-cart-shopping" 
+          style="position: relative; top: 10px"></i></a>    
+      </div>  
     </div>
 
-    {% endblock %}
-  </body>
+
+  </nav>
+  <!-- As a heading -->
+  {% block secondnav %}
+  <!-- <nav class="navbar navbar-light navbar-second">
+    <ul class="list-group list-group-horizontal navbar-second d-flex navbar-nav">
+      <li class="list-group-item border-0"><a class="nav-link" href="/giavisot/">Gia vị & Sốt</a></li>
+      <li class="list-group-item border-0"><a class="nav-link" href="/thucphamanlien/">Thực phẩm ăn liền</a></li>
+      <li class="list-group-item border-0"><a class="nav-link" href="#">Bánh kẹo</a></li>
+      </li>
+      <li class="list-group-item border-0"><a class="nav-link" href="#">Đồ uống</a></li>
+      </li>
+      <li class="list-group-item border-0"><a class="nav-link" href="#">Rong biển</a></li>
+      </li>
+      <li class="list-group-item border-0"><a class="nav-link" href="/kcook/">Kcook</a></li>
+      </li>
+
+    </ul>
+  </nav> -->
+  {% endblock %}
+
+  {% block tieude %}
+
+  {% endblock %}
+
+  {% block images %}
+
+  {% endblock %}
+
+  {% block sanpham %}
+  {% endblock %}
+  {% block linkjs %}
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  {% endblock %}
+
+
+  {% block footer %}
+  <div class="footer">
+    <img src="{%static 'images\footer-icon.png' %}" alt="" class="d-inline-block align-text-top">
+    <h5>@Copyrights belongs to Nhóm 15</h5>
+
+  </div>
+
+  {% endblock %}
+  <!-- <script src="{%static 'static/js/base.js' %}> -->
+
+
+  </script>
+</body>
+
 </html>
