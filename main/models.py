@@ -25,8 +25,21 @@ class KcookPost(models.Model):
     def __str__(self):
         return self.title_post
 
-# class Product(models.Model):
-#     slug = models.SlugField(unique=True, blank=True)
+
+
+class Categrory(models.Model):
+    cat_name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.cat_name
+
+class Product(models.Model):
+    product_name = models.CharField(max_length=100)
+    image = models.ImageField(upload_to = "product_imgs/")
+    price = models.PositiveIntegerField()
+    slug = models.SlugField(unique=True, blank=True)
+    product_des = models.TextField()
+    cat_name = models.ForeignKey(Categrory,on_delete=models.CASCADE)
 
 
 
