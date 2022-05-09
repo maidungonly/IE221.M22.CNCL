@@ -44,9 +44,8 @@
 }
 
 .navbar-first{
-  background: #fff691;
-  padding: 5px 0;
-  transition: 0.5s all;
+  background-color: #fff691 !important;
+
 }
 
 .navbar-brand {
@@ -87,6 +86,7 @@ border-radius: 20px;
   justify-content: center;
   justify-items: center;
   font-size: 30px;
+  margin-left: 80px;
 }
 .fa-cart-shopping {
   padding-top: 15px;
@@ -112,6 +112,7 @@ border-radius: 20px;
   text-decoration: none;
   color: #000 !important;
   border: none  !important;
+  margin-right: 80px;
 }
 
 .img-banner{

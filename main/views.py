@@ -1,3 +1,4 @@
+from queue import PriorityQueue
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from .models import KcookPost,Product
@@ -29,7 +30,7 @@ from .models import KcookPost,Product
 
 
 def home(response):
-    data = Product.objects.all().order_by('-id')
+    data = Product.objects.filter(pk__in = [14,15,16,19,18,22,27,28,29,24,25,30,10,11,13])
 
     return render (response,"main/home.html",{'data':data})
 
@@ -63,18 +64,28 @@ def chitietkcook(response,id):
     # data=KcookPost.objects.filter(id=kcook_post).order_by('-id')
     return render(response,"main/chitietkcook.html",{'data':kcook_post})
 
+def home(response):
+    data = Product.objects.filter(pk__in = [14,15,16,19,18,22,27,28,29,24,25,30,10,11,13])
+    return render (response,"main/home.html",{'data':data})
 
-def giavisot(response):
-    return render(response,"main/giavisot.html",{})
+def chitietsanpham(response,slug):
+    data = Product.objects.filter(pk__in = [14,15,16,19,18,22,27,28,29,24,25,30,10,11,13]).get(slug=slug)
+    # chitietsanpham_post = Product.objects.get(id=id)
+    # chitietsanpham_post = get_object_or_404(Product, slug=slug)
+    # data = Product.objects.get(slug=slug)
+    return render(response,"main/chitietsanpham.html",{'data':data})
+
+
 
 
 def thucphamanlien(response):
     return render(response,"main/thucphamanlien.html",{})
 
-
+def giavisot(response):
+    data = Product.objects.filter(cat_name = 2)
+    return render(response,"main/giavisot.html",{'data':data})
 
 def thongtinmh(response):
     return render(response,"main/thongtinmh.html",{})
 
-def chitietsanpham(response):
-    return render(response,"main/chitietsanpham.html",{})
+

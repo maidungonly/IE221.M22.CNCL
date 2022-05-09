@@ -5,23 +5,23 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/chitietsanpham.css' %}" />
 
 {% endblock %}
-{% block title%} Chi tiết sản phẩm {% endblock %}
+{% block title%}{{data.product_name}}{% endblock %}
 
 {% block tieude %}
 <h1 class="chitietsanpham-title">Chi tiết sản phẩm</h1>
-<p class="chitietsanpham-navigate">Thực phẩm ăn liền > Bánh gạo cay</p>
+<p class="chitietsanpham-navigate">{{data.cat_name}} > {{data.product_name}}</p>
 {% endblock %}
 
 {% block sanpham %}
 <div class="chitiet_header">
     <div class="row">
         <div class="col-12 col-md-6">
-            <img src="{%static 'images\giavisot.png'%}" class="img-fluid img-banner mx-auto d-block" />
+            <img src="/media/{{data.image}}" class="img-fluid img-banner mx-auto d-block" />
 
         </div>
         <div class="col-12 col-md-6 price-foodname">
-            <p>Food name</p>
-            <h3>100.000đ</h3>
+            <p>{{data.product_name}}</p>
+            <h3>{{data.price}}</h3>
             <button type="button" class="btn btn-primary themvaogio-btn btn-lg">Thêm vào giỏ hàng</button>
             <button type="button" class="btn btn-primary muangay-btn btn-lg">Mua ngay</button>
 
@@ -32,9 +32,7 @@
 
 <div class="mota">
     <h2 class="header_mota">Mô tả sản phẩm</h2>
-    <p class="p_noidung">Em cần được chữa lành tâm hồn sau vụ cá Koi :((
-    Hai năm trước xem chương trình STT cực kì ngưỡng mộ người vợ tào khang ấy, bây giờ xem lại mắt rưng rưng.
-    Gái có công, chồng vẫn phụ!!! Sự nghèo khó của đàn ông thử thách trái tim phụ nữ, còn sự giàu có lại thử thách chính bản thân anh ta. Rõ là: "Ở đời, đâu có cô gái hay người thứ ba nào xuất hiện khi chồng người ta đang lập nghiệp, đang khó khăn, đang không có xu dính túi đâu.”</p>
+    <pre class="p_noidung">{{data.product_des}}</pre>
 </div>
 
 

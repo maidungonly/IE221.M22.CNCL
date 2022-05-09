@@ -12,10 +12,10 @@ urlpatterns = [
     path("kcook/",views.kcook,name="kcook"),
     path("giavisot/",views.giavisot,name="giavisot"),
     path("thucphamanlien/",views.thucphamanlien,name="thucphamanlien"),
-    path('kcook-post-list/<int:id>',views.chitietkcook,name='chitietkcook'),
-    path("kcook/chitietkcook/", views.chitietkcook, name="chitietkcook"),
+    path('kcook/kcook-post-list/<int:id>',views.chitietkcook,name='chitietkcook'),
+    # path("kcook/chitietkcook/", views.chitietkcook, name="chitietkcook"),
     path("thongtinmuahang/", views.thongtinmh, name="thongtinmuahang"),
-    path("chitietsanpham/", views.chitietsanpham, name="chitietsanpham"),
+    path('chitietsanpham-list/<slug:slug>', views.chitietsanpham, name="chitietsanpham")
 ]
  
 if settings.DEBUG:  
