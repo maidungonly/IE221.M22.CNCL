@@ -95,12 +95,12 @@
       </ul>
       <form class="d-flex" method=POST action="{% url 'search' %}">
         {% csrf_token %}
-        <input class="form-control mr-sm-0 search-box" type="search" placeholder="Tìm kiếm sản phẩm..."
+        <input class="form-control me-2 search-box" type="search" placeholder="Tìm kiếm sản phẩm..."
           aria-label="Search" name="searched" id="searched">
-        <button class="btn btn-light my-sm-0">Tìm</button>
+        <button class="btn btn-light my-sm-0 search-btn" style="border-radius: 10px;">Tìm</button>
       </form>
 
-      <div class="navbar-cart col-md-0 ">
+      <div class="navbar-cart col-md-0 ms-5">
         <a href="/giohang/"><i class="fa-solid fa-cart-shopping"></i></a>
       </div>
     </div>

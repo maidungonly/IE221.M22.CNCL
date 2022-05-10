@@ -108,7 +108,7 @@ border-radius: 20px;
   border: none  !important;
   margin-right: 80px;
 }
-
+*/
 .img-banner{
   align-items: center;
   display: flex;
@@ -119,15 +119,16 @@ border-radius: 20px;
   justify-items: center;
   background-color: #fff691;
   padding: 0;
-  max-height: 120px;
-  margin: 0;
+  margin-top: 485px;
+  max-height: 200px;
+  /* margin: 0; */
   font-size: 27px;
   font-family: quicksand-bold;
 }
 .footer h5{
  margin: 0;
  margin-bottom: 0 !important;
-} */
+} 
 
 *{
   box-sizing: border-box;
@@ -142,6 +143,8 @@ border-radius: 20px;
 .nav-link{
   color:black !important;
   font-family: quicksand-bold;
+  margin: 10px;
+
 }
 .navbar-brand:hover{
   color: #DC2E07 !important;
@@ -153,7 +156,7 @@ border-radius: 20px;
   width: 60px;
   height: 60px;
 }
-.form-control, .btn{
+.form-control, .search-btn{
   height: 40px;
   padding-left: 20px;
   border: 0.5px solid rgb(184, 184, 184) !important;
@@ -162,11 +165,11 @@ border-radius: 20px;
 .form-control{
   margin-left: 5px;
 }
-.btn{
+.search-btn{
   width: auto;
   background-color: white !important;
 }
-.btn:hover{
+.search-btn:hover{
   background-color: #f4bf00 !important;
 }
 .navbar-cart a{
@@ -183,4 +186,17 @@ border-radius: 20px;
 }
 .navbar-toggler{
   background-color: black !important;
+}
+.search-box{
+  border-radius: 20px !important;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+.card:hover{
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.25);
+  transition: 0.8s ease-in-out;
+}
+.card-text{
+  color: #DC2E07;
+  font-size: 30px;
+  font-family: quicksand-bold;
 }

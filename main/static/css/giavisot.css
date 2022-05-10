@@ -29,14 +29,15 @@
     font-size: 20px;
     font-family: quicksand-bold;
 }
-.giavisot-page p{
+/* .giavisot-page p{
     font-size: 20px;
     font-family: quicksand-bold;
-}
+} */
 .giavisot-page a{
     text-decoration: none;
     color: #000;
 }
 .giavisot-col{
-  margin: 20px;
+  margin: 15px;
+  padding: 5px;
 }
