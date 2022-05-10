@@ -18,7 +18,7 @@
   font-family: reenie-beenie;
   src: url(../font/ReenieBeanie-Regular.ttf);
 }
-*{
+/* *{
   box-sizing: border-box;
   
 }
@@ -92,11 +92,6 @@ border-radius: 20px;
   vertical-align: middle;
   align-items: center;
 }
-.fa-cart-shopping span {
-  font-family: quicksand;
-  font-size: 20px;
-  align-items: center;
-}
 
 .navbar-second {
   color: #000;
@@ -132,4 +127,61 @@ border-radius: 20px;
 .footer h5{
  margin: 0;
  margin-bottom: 0 !important;
+} */
+
+*{
+  box-sizing: border-box;
+  
+}
+.navbar-brand{
+  color: black !important;
+  font-family:reenie-beenie;
+  font-size: 50px !important;
+}
+
+.nav-link{
+  color:black !important;
+  font-family: quicksand-medium;
+}
+.navbar-brand:hover{
+  color: #DC2E07 !important;
+}
+.nav-link:hover, .nav-link:active{
+  color: red !important;
+  font-family: quicksand-bold;
+}
+.navbar-brand img {
+  width: 60px;
+  height: 60px;
+}
+.form-control, .btn{
+  height: 40px;
+  padding-left: 20px;
+  border: 0.5px solid rgb(184, 184, 184) !important;
+ 
+}
+.form-control{
+  margin-left: 5px;
+}
+.btn{
+  width: auto;
+  background-color: white !important;
+}
+.btn:hover{
+  background-color: #f4bf00 !important;
+}
+.navbar-cart a{
+  color: black !important;
+  font-size: 30px;
+  position: relative;
+  bottom: 8px;
+  left: 40px;
+}
+.fa-cart-shopping {
+  padding-top: 15px;
+  vertical-align: middle;
+  align-items: center;
+}
+.navbar-toggler{
+  background-color: black !important;
 }
