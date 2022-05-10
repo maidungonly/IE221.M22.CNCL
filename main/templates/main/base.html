@@ -17,115 +17,55 @@
   <link rel="icon" type="image/x-icon" href="{% static 'images/favicon-removebg-preview.png' %}">
 
 
-
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/
-bootstrap/4.0.0/css/bootstrap.min.css" >
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/
-popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn. bootstrapcdn.com/bootstrap/4.0.0/js/
-bootstrap.min.js"></script> -->
-
   {% block linkcss %}{% endblock %}
 </head>
 
 <body>
+  <nav class="navbar fixed-top navbar-expand-md navbar-dark  navbar-first sticky-tops">
 
-  <!-- <nav class="navbar navbar-light navbar-first">
-      <div class="container-fluid ">
-      
-        <a class="navbar-brand" href="/home/">
-          <img src="{%static 'images\favicon-removebg-preview.png' %}" alt=""  class="d-inline-block align-text-top">
-          K-Mart
-        </a>
+      <a class="navbar-brand mb-0 h1" href="/home/" style="color:black">
+        <img src="{%static 'images\favicon-removebg-preview.png' %}" class="d-inline-block align-top">K-Mart
+      </a>
 
-        <div class="navbar-nav col-md-6 ms-auto ">
-          
-          <form>
-            <input
-              type="text"
-              name="user"
-              class="form-control"
-              id="Searchbox"
-              placeholder="Tìm kiếm đồ ăn..."
-            />
-          </form>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu"
+        aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="Toggle navigation" style="background: #000;">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="toggleMobileMenu">
+        <ul class="navbar-nav">
+          <li>
+            <a class="nav-link" href="/giavisot/">Gia vị & Sốt</a>
+          </li>
+          <li>
+            <a class="nav-link" href="/thucphamanlien/">Thực phẩm ăn liền</a>
+          </li>
+          <li>
+            <a class="nav-link" href="/banhkeo/">Bánh kẹo</a>
+          </li>
+          <li>
+            <a class="nav-link" href="/douong/">Đồ uống</a>
+          </li>
+          <li>
+            <a class="nav-link" href="/rongbien/">Rong biển</a>
+          </li>
+          <li>
+            <a class="nav-link" href="/kcook/">Kcook</a>
+          </li>
+        </ul>
+        <form class="d-flex" method=POST action="{% url 'search' %}">
+          {% csrf_token %}
+          <input class="form-control mr-sm-0 search-box" type="search" placeholder="Tìm kiếm sản phẩm..."
+            aria-label="Search" name="searched" id="searched">
+          <button class="btn btn-light my-sm-0">Tìm kiếm</button>
+        </form>
+
+        <div class="navbar-cart col-md-0 ">
+          <a href="/giohang/"><i class="fa-solid fa-cart-shopping"style="position: relative; top: 10px"></i></a>
         </div>
-        <div class="navbar-cart col-md-3 ">
-          <a href="/giohang/"><i class="fa-solid fa-cart-shopping" ><span>Giỏ hàng</span></i>  </a>    
-        </div>
-    </nav> -->
-  <nav class="navbar navbar-expand-lg navbar-dark navbar-first sticky-tops " >
-    <a class="navbar-brand" href="/home/" style="color:black">
-      <img src="{%static 'images\favicon-removebg-preview.png' %}" alt="" class="d-inline-block align-text-top">K-Mart
-    </a>
-
-    <button 
-      class="navbar-toggler" 
-      type="button" 
-      data-bs-toggle="collapse" 
-      data-bs-target="#toggleMobileMenu" 
-      aria-controls="toggleMobileMenu"
-      aria-expanded="false" 
-      aria-label="Toggle navigation"
-      style="background: #000;">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="toggleMobileMenu">
-      <ul class="navbar-nav">
-        <li >
-          <a class="nav-link" href="/giavisot/">Gia vị & Sốt</a>
-        </li>
-        <li >
-          <a class="nav-link" href="/thucphamanlien/">Thực phẩm ăn liền</a>
-        </li>
-        <li>
-          <a class="nav-link" href="/banhkeo/">Bánh kẹo</a>
-        </li>
-        <li>
-          <a class="nav-link" href="/douong/">Đồ uống</a>
-        </li>
-        <li>
-          <a class="nav-link" href="/rongbien/">Rong biển</a>
-        </li>
-        <li>
-          <a class="nav-link" href="/kcook/">Kcook</a>
-        </li>
-      </ul>
-      <form class="d-flex" method=POST action="{% url 'search' %}">
-        {% csrf_token %}
-        <input class="form-control mr-sm-1 search-box" type="search" placeholder="Tìm kiếm sản phẩm..." aria-label="Search" name="searched">
-        <button class="btn btn-light my-sm-0" type="submit">Tìm kiếm</button>
-      </form>    
-      
-      <div class="navbar-cart col-md-0 ">
-        <a href="/giohang/"><i class="fa-solid fa-cart-shopping" 
-          style="position: relative; top: 10px"></i></a>    
-      </div>  
-    </div>
-
-
+      </div>
   </nav>
-  <!-- As a heading -->
-  {% block secondnav %}
-  <!-- <nav class="navbar navbar-light navbar-second">
-    <ul class="list-group list-group-horizontal navbar-second d-flex navbar-nav">
-      <li class="list-group-item border-0"><a class="nav-link" href="/giavisot/">Gia vị & Sốt</a></li>
-      <li class="list-group-item border-0"><a class="nav-link" href="/thucphamanlien/">Thực phẩm ăn liền</a></li>
-      <li class="list-group-item border-0"><a class="nav-link" href="#">Bánh kẹo</a></li>
-      </li>
-      <li class="list-group-item border-0"><a class="nav-link" href="#">Đồ uống</a></li>
-      </li>
-      <li class="list-group-item border-0"><a class="nav-link" href="#">Rong biển</a></li>
-      </li>
-      <li class="list-group-item border-0"><a class="nav-link" href="/kcook/">Kcook</a></li>
-      </li>
 
-    </ul>
-  </nav> -->
-  {% endblock %}
 
   {% block tieude %}
 

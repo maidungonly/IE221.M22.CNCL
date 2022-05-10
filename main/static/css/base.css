@@ -40,7 +40,7 @@
   color: #000 !important;
 }
 .fa-cart-shopping span {
-  display: block;
+  display: inline-block;
 }
 
 .navbar-first{
@@ -65,7 +65,7 @@
   color: gray !important;
   width: 500px !important;
   height: 50px;
-  font-size: 20px;
+  font-size: 15px;
   float: right;
   font-family: quicksand;
   background: #FFFFFF;
@@ -85,7 +85,6 @@ border-radius: 20px;
   align-items: center;
   justify-content: center;
   justify-items: center;
-  font-size: 30px;
   margin-left: 80px;
 }
 .fa-cart-shopping {
