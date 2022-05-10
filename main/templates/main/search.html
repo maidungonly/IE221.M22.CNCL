@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %} 
+{% load static %}
+
+{% block linkcss %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/search.css' %}" />
+
+{% endblock %} 
+{% block title%} Tìm kiếm cho.... {% endblock %} 
+
+{% block tieude %}
+{% if searched %}
+<h3>Bạn đã tìm kiếm cho {{searched}}</h3>
+<br>
+   {% for product in product %}
+      <a href="/chitietsanpham-list/{{product.slug}}"> {{ product }}</a><br>
+    {% endfor %}
+{% else %}
+<h3>Hey! Bạn đã quên nhập sản phẩm cần tìm kiếm sản phẩm rồi!</h3>
+{% endif %}
+
+
+{% endblock %}

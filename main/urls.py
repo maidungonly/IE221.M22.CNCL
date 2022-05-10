@@ -21,7 +21,9 @@ urlpatterns = [
     path('kcook/kcook-post-list/<int:id>',views.chitietkcook,name='chitietkcook'),
     # path("kcook/chitietkcook/", views.chitietkcook, name="chitietkcook"),
     path("thongtinmuahang/", views.thongtinmh, name="thongtinmuahang"),
-    path('chitietsanpham-list/<slug:slug>', views.chitietsanpham, name="chitietsanpham")
+    path('chitietsanpham-list/<slug:slug>', views.chitietsanpham, name="chitietsanpham"),
+    path('search/', views.search, name='search'),
+    
 
 ]
  

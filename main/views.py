@@ -1,3 +1,4 @@
+from multiprocessing import context
 from queue import PriorityQueue
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
@@ -94,5 +95,13 @@ def rongbien(response):
     return render(response,"main/rongbien.html",{'data':data})
 def thongtinmh(response):
     return render(response,"main/thongtinmh.html",{})
+def search(request):
+    if request.method == "POST":
+        searched = request.POST['searched']
+        product = Product.objects.filter(product_name__contains= searched)
+        return render(request,'main/search.html', {'searched':searched, 'product': product})
+    else:
+        return render(request,'main/search.html', {})
+             
 
 
