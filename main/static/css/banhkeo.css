@@ -24,19 +24,24 @@
     padding: 10px;
     width: 1600px;
 }
-
-.giavisot-page h5{
+.card-group{
+    padding: 30px !important;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.banhkeo-page h5{
     font-size: 20px;
     font-family: quicksand-bold;
 }
-.giavisot-page p{
+.banhkeo-page p{
     font-size: 20px;
     font-family: quicksand-bold;
 }
-.giavisot-page a{
+.banhkeo-page a{
     text-decoration: none;
     color: #000;
 }
-.giavisot-col{
+.banhkeo-col{
   margin: 20px;
 }
