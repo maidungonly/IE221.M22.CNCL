@@ -65,45 +65,47 @@
         </div>
       </div>
   </nav> -->
-  <nav class="navbar navbar-expand-md navbar-dark  navbar-first sticky-tops" style="background-color: #FFF691">
-    <a href="/home/" class="navbar-brand mb-0 h1">
-      <img src="{%static 'images\favicon-removebg-preview.png' %}" class="d-inline-block align-top">K-Mart
-    </a>
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarMenu">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a href="/giavisot/" class="nav-link">Gia vị & Sốt</a>
-        </li>
-        <li class="nav-item">
-          <a href="/thucphamanlien/" class="nav-link">Thực phẩm ăn liền</a>
-        </li>
-        <li class="nav-item">
-          <a href="/banhkeo/" class="nav-link">Bánh kẹo</a>
-        </li>
-        <li class="nav-item">
-          <a href="/douong/" class="nav-link">Đồ uống</a>
-        </li>
-        <li class="nav-item">
-          <a href="/rongbien/" class="nav-link">Rong biển</a>
-        </li>
-        <li class="nav-item">
-          <a href="/kcook/" class="nav-link">Kcook</a>
-        </li>
-      </ul>
-      <form class="d-flex" method=POST action="{% url 'search' %}">
-        {% csrf_token %}
-        <input class="form-control me-2 search-box" type="search" placeholder="Tìm kiếm sản phẩm..."
+  <nav class="navbar navbar-expand-sm navbar-dark  navbar-first sticky-tops" style="background-color: #FFF691">
+    <div class="container-fluid">
+      <a href="/home/" class="navbar-brand mb-0 h1">
+        <img src="{%static 'images\favicon-removebg-preview.png' %}" class="d-inline-block align-top">K-Mart
+      </a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="/giavisot/" class="nav-link">Gia vị & Sốt</a>
+          </li>
+          <li class="nav-item">
+            <a href="/thucphamanlien/" class="nav-link">Thực phẩm ăn liền</a>
+          </li>
+          <li class="nav-item">
+            <a href="/banhkeo/" class="nav-link">Bánh kẹo</a>
+          </li>
+          <li class="nav-item">
+            <a href="/douong/" class="nav-link">Đồ uống</a>
+          </li>
+          <li class="nav-item">
+            <a href="/rongbien/" class="nav-link">Rong biển</a>
+          </li>
+          <li class="nav-item">
+            <a href="/kcook/" class="nav-link">Kcook</a>
+          </li>
+        </ul>
+        <form class="d-flex" method=POST action="{% url 'search' %}">
+          {% csrf_token %}
+          <input class="form-control me-2 search-box" type="search" placeholder="Tìm kiếm sản phẩm..."
           aria-label="Search" name="searched" id="searched">
-        <button class="btn btn-light my-sm-0 search-btn" style="border-radius: 10px;"><i class="fa-solid fa-magnifying-glass"></i></button>
-      </form>
+          <button class="btn btn-light my-sm-0 search-btn" style="border-radius: 10px;"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
 
-      <div class="navbar-cart col-md-0 ms-5">
-        <a href="/giohang/"><i class="fa-solid fa-cart-shopping"></i></a>
-      </div>
+        <div class="navbar-cart col-md-0 ">
+          <a href="/giohang/"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
     </div>
+  </div>
   </nav>
   {% block tieude %}
 
@@ -119,6 +121,57 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
+  <script type="text/javascript" src="{% static 'js/cart.js' %}"> </script>  
+  <script type="text/javascript">
+		var user = '{{request.user}}'
+
+		function getToken(name) {
+		    var cookieValue = null;
+		    if (document.cookie && document.cookie !== '') {
+		        var cookies = document.cookie.split(';');
+		        for (var i = 0; i < cookies.length; i++) {
+		            var cookie = cookies[i].trim();
+		            // Does this cookie string begin with the name we want?
+		            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+		                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+		                break;
+		            }
+		        }
+		    }
+		    return cookieValue;
+		}
+		var csrftoken = getToken('csrftoken')
+
+		function getCookie(name) {
+		    // Split cookie string and get all individual name=value pairs in an array
+		    var cookieArr = document.cookie.split(";");
+
+		    // Loop through the array elements
+		    for(var i = 0; i < cookieArr.length; i++) {
+		        var cookiePair = cookieArr[i].split("=");
+
+		        /* Removing whitespace at the beginning of the cookie name
+		        and compare it with the given string */
+		        if(name == cookiePair[0].trim()) {
+		            // Decode the cookie value and return
+		            return decodeURIComponent(cookiePair[1]);
+		        }
+		    }
+
+		    // Return null if not found
+		    return null;
+		}
+		var cart = JSON.parse(getCookie('cart'))
+
+		if (cart == undefined){
+			cart = {}
+			console.log('Cart Created!', cart)
+			document.cookie ='cart=' + JSON.stringify(cart) + ";domain=;path=/"
+		}
+		console.log('Cart:', cart)
+	
+	</script>
+
   {% endblock %}
 
 
@@ -130,9 +183,7 @@
   </div>
 
   {% endblock %}
-  <!-- <script src="{%static 'static/js/base.js' %}">
-
-  </script> -->
+  
 </body>
 
 </html>

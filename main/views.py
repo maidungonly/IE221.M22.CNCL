@@ -2,7 +2,9 @@ from multiprocessing import context
 from queue import PriorityQueue
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
-from .models import KcookPost,Product
+from .models import KcookPost,Product,Order,OrderItem
+from django.http import JsonResponse
+import json
 
 # def index(response,id):
 #     ls = ToDoList.objects.get(id = id)
@@ -52,8 +54,8 @@ def base(response):
 #         form = CreateNewList()
 #     return render(response,"main/create.html",{"form":form}) 
 
-def giohang(response):
-    return render(response,"main/giohang.html",{})
+# def giohang(response):
+#     return render(response,"main/giohang.html",{})
 
 def kcook(response):
     data = KcookPost.objects.all().order_by('-id')
@@ -71,12 +73,12 @@ def home(response):
 
     return render (response,"main/home.html",{'data':data})
 
-def chitietsanpham(response,slug):
-    data = Product.objects.get(slug=slug)
-    # chitietsanpham_post = Product.objects.get(id=id)
-    # chitietsanpham_post = get_object_or_404(Product, slug=slug)
-    # data = Product.objects.get(slug=slug)
-    return render(response,"main/chitietsanpham.html",{'data':data})
+# def chitietsanpham(response,slug):
+#     data = Product.objects.get(slug=slug)
+#     # chitietsanpham_post = Product.objects.get(id=id)
+#     # chitietsanpham_post = get_object_or_404(Product, slug=slug)
+#     # data = Product.objects.get(slug=slug)
+#     return render(response,"main/chitietsanpham.html",{'data':data})
 
 def thucphamanlien(response):
     data = Product.objects.filter(cat_name = 6)
@@ -104,4 +106,106 @@ def search(request):
         return render(request,'main/search.html', {})
              
 
+def updateItem(request):
+	data = json.loads(request.body)
+	productId = data['productId']
+	action = data['action']
+	print('Action:', action)
+	print('Product:', productId)
 
+	customer = request.user.customer
+	product = Product.objects.get(id=productId)
+	order, created = Order.objects.get_or_create(customer=customer, complete=False)
+
+	orderItem, created = OrderItem.objects.get_or_create(order=order, product=product)
+
+	if action == 'add':
+		orderItem.quantity = (orderItem.quantity + 1)
+	elif action == 'remove':
+		orderItem.quantity = (orderItem.quantity - 1)
+
+	orderItem.save()
+
+	if orderItem.quantity <= 0:
+		orderItem.delete()
+
+	return JsonResponse('Item was added', safe=False)
+   
+def chitietsanpham(request,slug):
+    if request.user.is_authenticated:
+        customer = request.user.customer
+        order,created = Order.objects.get_or_create(customer=customer,complete=False)
+        items = order.orderitem_set.all()
+        cartItems=order.get_cart_items
+    else:
+        items =[]
+        order = {'get_cart_total':0,'get_cart_items':0}
+        cartItems = order['get_cart_items']
+
+    data = Product.objects.get(slug=slug)
+    context = {'products':data,'cartItems':cartItems}
+    return render(request,'main/chitietsanpham.html',context)
+
+
+def giohang(request):
+    if request.user.is_authenticated:
+        customer = request.user.customer
+        order,created = Order.objects.get_or_create(customer=customer,complete=False)
+        items = order.orderitem_set.all()
+        cartItems=order.get_cart_items
+    else:
+        try:
+            cart = json.loads(request.COOKIES['cart'])
+        except:
+            cart ={}
+        print('Cart:',cart)
+
+        items =[]
+        order = {'get_cart_total':0,'get_cart_items':0}
+        cartItems = order['get_cart_items']
+        
+        for i in cart:
+            cartItems += cart[i]['quantity']
+
+            product = Product.objects.get(id = i)
+            total = (product.price * cart[i]['quantity'])
+
+            order['get_cart_total'] += total
+            order['get_cart_items'] += cart[i]['quantity']
+
+            item ={
+                'product':{
+                    'id':product.id,
+                    'product_name':product.product_name,
+                    'price':product.price,
+                    'image':product.image
+                    },
+                'quantity':cart[i]['quantity'],
+                'get_total':total,
+            }
+            items.append(item)
+
+    
+    context = {'items':items,'order':order,'cartItems':cartItems}
+    return render(request,'main/giohang.html',context)
+
+
+def thongtinmuahang(request):
+    if request.user.is_authenticated:
+        customer = request.user.customer
+        order,created = Order.objects.get_or_create(customer=customer,complete=False)
+        items = order.orderitem_set.all()
+        cartItems=order.get_cart_items
+    else:
+        items =[]
+        order = {'get_cart_total':0,'get_cart_items':0}
+        # cartItems = order['get_cart_items']
+
+    
+    context = {'items':items,'order':order}
+    return render(request,'main/thongtinmh.html',context)
+
+
+
+    
+  

@@ -23,7 +23,7 @@ urlpatterns = [
     path("thongtinmuahang/", views.thongtinmh, name="thongtinmuahang"),
     path('chitietsanpham-list/<slug:slug>', views.chitietsanpham, name="chitietsanpham"),
     path('search/', views.search, name='search'),
-    
+    path('update_item/',views.updateItem,name="update_item")
 
 ]
  

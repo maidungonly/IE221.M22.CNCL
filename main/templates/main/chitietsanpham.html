@@ -16,13 +16,13 @@
 <div class="chitiet_header">
     <div class="row">
         <div class="col-12 col-md-6">
-            <img src="/media/{{data.image}}" class="img-fluid img-banner mx-auto d-block" />
+            <img src="/media/{{products.image}}" class="img-fluid img-banner mx-auto d-block" />
 
         </div>
         <div class="col-12 col-md-6 price-foodname">
-            <p>{{data.product_name}}</p>
-            <h3>{{data.price}}</h3>
-            <button type="button" class="btn btn-primary themvaogio-btn ">Thêm vào giỏ hàng</button>
+            <p>{{products.product_name}}</p>
+            <h3>{{products.price}}</h3>
+            <button type="button" class="btn btn-primary themvaogio-btn update-cart" data-action="add" data-product="{{products.id}}">Thêm vào giỏ hàng</button>
             <button type="button" class="btn btn-primary muangay-btn ">Mua ngay</button>
 
         </div>
@@ -32,7 +32,7 @@
 
 <div class="mota">
     <h2 class="header_mota">Mô tả sản phẩm</h2>
-    <pre class="p_noidung">{{data.product_des}}</pre>
+    <pre class="p_noidung">{{products.product_des}}</pre>
 </div>
 
 

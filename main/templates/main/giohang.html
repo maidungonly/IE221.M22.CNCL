@@ -28,7 +28,7 @@
     </div>
     
 
-    <div class="row justify-content-md-center row-giohang align-items-center">
+    <!-- <div class="row justify-content-md-center row-giohang align-items-center">
         <div class="col-3">
             <img src="{%static 'images\giavisot.png' %}" alt=""  class="d-inline-block align-text-top">
 
@@ -45,81 +45,71 @@
         <div class="col">
           100.000đ
         </div>
-    </div>
+    </div> -->
 
+    
+
+    {% for item in items %}
     <div class="row justify-content-md-center row-giohang align-items-center">
         <div class="col-3">
-            <img src="{%static 'images\giavisot.png' %}" alt=""  class="d-inline-block align-text-top">
+            <img src="/media/{{item.product.image}}" alt=""  class="d-inline-block align-text-top">
 
         </div>
         <div class="col-3 ">
 
-            <p >Food Name</p>
+            <p >{{item.product.product_name}}</p>
         </div>
         <div class="col">
-            <i class="fa-solid fa-square-plus"></i>
-          1
-          <i class="fa-solid fa-square-minus"></i>
+            
+          <!-- <i class="fa-solid fa-square-minus"></i> -->
+          <div class="quantity">
+            <!-- <img data-product="{{item.product.id}}" data-action="add" class="chg-quantity update-cart" src="{% static  'images/arrow-up.png' %}"> -->
+            <i class="fa-solid fa-square-minus update-cart" data-product="{{item.product.id}} " data-action="remove"></i>
+            {{item.quantity}}
+            <!-- <img data-product="{{item.product.id}}" data-action="remove" class="chg-quantity update-cart" src="{% static  'images/arrow-down.png' %}"> -->
+            <i class="fa-solid fa-square-plus update-cart" data-product="{{item.product.id}} " data-action="add"></i>
+
+          </div>
         </div>
         <div class="col">
-          100.000đ
+          {{item.get_total}}
         </div>
     </div>
-
-    <div class="row justify-content-md-center row-giohang align-items-center">
-        <div class="col-3">
-            <img src="{%static 'images\giavisot.png' %}" alt=""  class="d-inline-block align-text-top">
-
-        </div>
-        <div class="col-3 ">
-
-            <p >Food Name</p>
-        </div>
-        <div class="col">
-            <i class="fa-solid fa-square-plus"></i>
-          1
-          <i class="fa-solid fa-square-minus"></i>
-        </div>
-        <div class="col">
-          100.000đ
-        </div>
-    </div>
-
-    <div class="row justify-content-md-center row-giohang align-items-center">
-        <div class="col-3">
-            <img src="{%static 'images\giavisot.png' %}" alt=""  class="d-inline-block align-text-top">
-
-        </div>
-        <div class="col-3 ">
-
-            <p >Food Name</p>
-        </div>
-        <div class="col">
-            <i class="fa-solid fa-square-plus"></i>
-          1
-          <i class="fa-solid fa-square-minus"></i>
-        </div>
-        <div class="col">
-          100.000đ
-        </div>
-    </div>
+    {% endfor %}
+    <!-- {% for item in items %}
+				<div class="cart-row">
+					<div style="flex:2"><img class="row-image" src="{{item.product.image}}"></div>
+					<div style="flex:2"><p>{{item.product.product_name}}</p></div>
+					<div style="flex:1"><p>${{item.product.price|floatformat:2}}</p></div>
+					<div style="flex:1">
+						<p class="quantity">{{item.quantity}}</p>
+						<div class="quantity">
+							<img data-product="{{item.product.id}}" data-action="add" class="chg-quantity update-cart" src="{% static  'images/arrow-up.png' %}">
+					
+							<img data-product="{{item.product.id}}" data-action="remove" class="chg-quantity update-cart" src="{% static  'images/arrow-down.png' %}">
+						</div>
+					</div>
+					<div style="flex:1"><p>${{item.get_total|floatformat:2}}</p></div>
+				</div>
+				{% endfor %} -->
 
     <div class="row justify-content-md-center row-tongcong">
         <div class="col-6">
           Tổng cộng
         </div>
         <div class="col">
-          4
+          {{order.get_cart_items}}
         </div>
         <div class="col">
-          400.000đ
+          {{order.get_cart_total}}
         </div>
     </div>
 
     <div class="d-grid gap-2 col-5 ms-auto">
-        <button class="btn btn-primary btn-thanhtoan" type="button">
+        <!-- <button class="btn btn-primary btn-thanhtoan" type="button" >
             Thanh toán
-        </button>
+        </button> -->
+        <a  style="float:right; margin:5px;" class="btn btn-success" href="/thongtinmuahang/">Checkout</a>
         
     </div>
 </div>

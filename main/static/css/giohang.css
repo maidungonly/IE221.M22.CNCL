@@ -59,3 +59,26 @@ font-family: quicksand-bold;
     margin: 30px;
     border-color: #000;
 }
+.quantity{
+	display: inline-block;
+	font-weight: 700;
+	padding-right:10px;
+	
+
+}
+
+.chg-quantity{
+	width: 5px;
+	cursor: pointer;
+	display: block;
+	margin-top: 5px;
+	transition:.1s;
+}
+
+.chg-quantity:hover{
+	opacity: .6;
+}
+.quantity img{
+  width: 5px;
+  /* height: 10px; */
+}
