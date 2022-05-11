@@ -147,10 +147,14 @@ border-radius: 20px;
 
 }
 .navbar-brand:hover{
-  color: #DC2E07 !important;
+  color: #000 !important;
 }
-.nav-link:hover, .nav-link:active{
+/* .nav-link:hover, .nav-link:active{
   color: red !important;
+} */
+.nav-link:hover{
+  text-shadow: 0 0 5px #4A4646;
+  transition: 0.5s ease;
 }
 .navbar-brand img {
   width: 60px;
@@ -170,7 +174,7 @@ border-radius: 20px;
   background-color: white !important;
 }
 .search-btn:hover{
-  background-color: #f4bf00 !important;
+  background-color: #FFD63F !important;
 }
 .navbar-cart a{
   color: black !important;
@@ -195,6 +199,10 @@ border-radius: 20px;
   box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.25);
   transition: 0.8s ease-in-out;
 }
+/* .card::after{
+  transition: 0.8s ease-out;
+
+} */
 .card-text{
   color: #DC2E07;
   font-size: 30px;
