@@ -82,3 +82,15 @@ font-family: quicksand-bold;
   width: 5px;
   /* height: 10px; */
 }
+
+.btn-success{
+  border-radius: 20px;
+  font-size: 30px;
+  color: #fff;
+  font-family: quicksand-bold;
+  background-color: #000;
+}
+.btn-success:hover{
+  background-color: #000;
+  
+}
