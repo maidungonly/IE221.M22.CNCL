@@ -39,19 +39,27 @@
 }
 .header_mota{
     font-family: quicksand-bold;
-    font-size: 50px;
+    font-size: 40px;
     padding: 10px;
 }
+
 .p_noidung{
-    font-family: quicksand;
-    font-size: 25px;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-bottom: 100px;
-    border-radius: 8px;
-    border: 1px solid #000000;
-    padding: 20px;
-}
+    
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 100; /* number of lines to show */
+           line-clamp: 20; 
+   -webkit-box-orient: vertical;
+   border: 2px solid #000;
+   margin: 45px;
+   padding: 20px;
+   border-radius: 20px;
+   font-family: quicksand;
+   font-size: 25px;
+   
+
+} 
 .price-foodname p{
     font-family: quicksand-bold;
     font-size: 45px;

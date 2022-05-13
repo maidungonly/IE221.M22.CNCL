@@ -9,7 +9,7 @@
 
 {% block tieude %}
 <h1 class="chitietsanpham-title">Chi tiết sản phẩm</h1>
-<p class="chitietsanpham-navigate">{{data.cat_name}} > {{data.product_name}}</p>
+<p class="chitietsanpham-navigate">{{products.cat_name}} > {{products.product_name}}</p>
 {% endblock %}
 
 {% block sanpham %}
@@ -32,7 +32,7 @@
 
 <div class="mota">
     <h2 class="header_mota">Mô tả sản phẩm</h2>
-    <pre class="p_noidung">{{products.product_des}}</pre>
+    <p class="p_noidung">{{products.product_des}}</p>
 </div>
 
 
