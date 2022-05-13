@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-kdv3&$8ypp3_l1wx6c7ii$dlqq-b$3oh00+1_htrhikxg(hyv4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['kmart-gowithme.herokuapp.com','127.0.0.1',' kmart-gowithme-live.herokuapp.com']
+ALLOWED_HOSTS = ['kmart-gowithme.herokuapp.com','127.0.0.1','kmart-gowithme-live.herokuapp.com']
 
 
 # Application definition
