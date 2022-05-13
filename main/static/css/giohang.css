@@ -59,7 +59,7 @@ font-family: quicksand-bold;
     margin: 30px;
     border-color: #000;
 }
-.quantity{
+/* .quantity{
 	display: inline-block;
 	font-weight: 700;
 	padding-right:10px;
@@ -73,7 +73,7 @@ font-family: quicksand-bold;
 	display: block;
 	margin-top: 5px;
 	transition:.1s;
-}
+} */
 
 .chg-quantity:hover{
 	opacity: .6;
@@ -93,4 +93,42 @@ font-family: quicksand-bold;
 .btn-success:hover{
   background-color: #000;
   
+}
+.cart-row{
+  font-family: quicksand;
+  font-size: 20px;
+	display: flex;
+    align-items: flex-stretch;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ececec;
+
+}
+
+.quantity{
+	display: inline-block;
+	font-family: quicksand-bold;
+	
+	
+
+}
+
+.chg-quantity{
+	width: 12px;
+	cursor: pointer;
+	display: block;
+	margin-top: 5px;
+	transition:.1s;
+}
+
+.chg-quantity:hover{
+	opacity: .6;
+}
+
+
+.hidden{
+	display: none!important;
+}
+.row-image{
+	width: 150px;
 }

@@ -208,6 +208,8 @@ border-radius: 20px;
   font-size: 30px;
   font-family: quicksand-bold;
 }
-a{
+.cart-items{
   text-decoration: none;
+  font-family: quicksand-bold;
+  
 }
