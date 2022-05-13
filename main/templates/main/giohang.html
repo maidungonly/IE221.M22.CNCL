@@ -78,7 +78,7 @@
 
 <div class="box-element">
   <div class="cart-row">
-    <div style="flex:2"></div>
+    <div style="flex:1"></div>
     <div style="flex:2"><strong>Sản phẩm</strong></div>
     <div style="flex:1"><strong>Giá</strong></div>
     <div style="flex:1"><strong>Số lượng</strong></div>
@@ -86,7 +86,7 @@
   </div>
   {% for item in items %}
   <div class="cart-row">
-    <div style="flex:2"><img class="row-image" src="/media/{{item.product.image}}"></div>
+    <div style="flex:1"><img class="row-image" src="/media/{{item.product.image}}"></div>
     <div style="flex:2"><p>{{item.product.product_name}}</p></div>
     <div style="flex:1"><p>{{item.product.price}}</p></div>
     <div style="flex:1">
@@ -98,8 +98,19 @@
       </div>
     </div>
     <div style="flex:1"><p>{{item.get_total}}</p></div>
+    
+
   </div>
+ 
   {% endfor %}
+  <div class="cart-row">
+    <div style="flex:1"></div>
+    <div style="flex:2"></div>
+    <div style="flex:1"><strong>TỔNG: </strong></div>
+    <div style="flex:1" class="cart-items"><strong>{{order.get_cart_items}}</strong></div>
+    <div style="flex:1"><strong>{{order.get_cart_total}}</strong></div>
+
+  </div>
 </div>
 
 </div>

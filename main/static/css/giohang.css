@@ -21,7 +21,7 @@
 
 .giohang h1{
     padding: 50px;
-    font-size: 50px;
+    font-size: 40px;
     font-family: quicksand-bold;
 }
 .giohang-detail .row{
@@ -29,12 +29,6 @@
     font-size: 25px;
     border-bottom: 1px solid #4A4646;
     text-align: center;
-}
-.row img{
-    max-width: 140px;
-    max-height: 140px;
-    min-width: 200px;
-    min-width: 200px;
 }
 
 .giohang-detail .row{
@@ -47,9 +41,9 @@
 .giohang-detail .row-tieude{
 font-family: quicksand-bold;
 }
-.giohang{
+/* .giohang{
     margin: 100px;
-}
+} */
 .giohang .btn-thanhtoan{
     font-family: quicksand-bold;
     font-size: 30px;
@@ -96,7 +90,7 @@ font-family: quicksand-bold;
 }
 .cart-row{
   font-family: quicksand;
-  font-size: 20px;
+  font-size: 15px;
 	display: flex;
     align-items: flex-stretch;
     padding-bottom: 10px;
@@ -130,5 +124,5 @@ font-family: quicksand-bold;
 	display: none!important;
 }
 .row-image{
-	width: 150px;
+	width: 100px;
 }
