@@ -24,52 +24,102 @@
     padding: 10px;
     width: 1600px;
 }
-.card-group{
-    padding: 30px !important;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.home-title{
+  text-decoration: none;
+  font-family: quicksand-bold;
+  font-size: 30px;
+  color: #000;
 }
+/* ---------------------------------- */
 
-
-
-.card-img-top {
-    width: 100%;
-    height: 17vw;
-    object-fit: cover;
-}
-.card{
-    margin: 10px !important;
-}
-.sanpham-home a{
-    text-decoration: none ;
-    color: black;
-    font-family: quicksand-bold;
-    
-
-}
-.sanpham-home .card-body a{
+.banchay-page h5{
   font-size: 20px;
-  text-decoration: none ;
-    color: black;
-    font-family: quicksand-bold;
+  font-family: quicksand-bold;
 }
-.sanphambanchay{
-  margin: 20px;
-}
-.giavivasot{
-  margin: 20px;
-}
-.thucphamanlien {
-  margin: 20px;
-}
-.banhkeo{
-  margin: 20px;
-}
-.douong{
-  margin: 20px;
 
+.banchay-page a{
+  text-decoration: none;
+  color: #000;
 }
-.rongbien{
-  margin: 20px;
+.banchay-col{
+margin: 20px;
+padding: 0px;
+}
+
+/* ---------------------------------- */
+
+.giavisot-page h5{
+  font-size: 20px;
+  font-family: quicksand-bold;
+}
+
+.giavisot-page a{
+  text-decoration: none;
+  color: #000;
+}
+.giavisot-col{
+margin: 20px;
+padding: 0px;
+}
+
+/* ----------------------------------- */
+
+.banhkeo-page h5{
+  font-size: 20px;
+  font-family: quicksand-bold;
+}
+
+.banhkeo-page a{
+  text-decoration: none;
+  color: #000;
+}
+.banhkeo-col{
+margin: 20px;
+padding: 0px;
+}
+
+/* --------------------------------------- */
+.rongbien-page h5{
+  font-size: 20px;
+  font-family: quicksand-bold;
+}
+
+.rongbien-page a{
+  text-decoration: none;
+  color: #000;
+}
+.rongbien-col{
+margin: 20px;
+padding: 0px;
+}
+
+/* ---------------------------------------- */
+.douong-page h5{
+  font-size: 20px;
+  font-family: quicksand-bold;
+}
+
+.douong-page a{
+  text-decoration: none;
+  color: #000;
+}
+.douong-col{
+margin: 20px;
+padding: 0px;
+}
+
+/* ----------------------------------------- */
+
+.anlien-page h5{
+  font-size: 20px;
+  font-family: quicksand-bold;
+}
+
+.anlien-page a{
+  text-decoration: none;
+  color: #000;
+}
+.anlien-col{
+margin: 20px;
+padding: 0px;
 }

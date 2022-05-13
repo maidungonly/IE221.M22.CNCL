@@ -19,145 +19,29 @@
 <div class="sanpham-home">
   <!-- San pham ban chay -->
   <div class="sanphambanchay">
-    <a href="#" ><h1>Sản phẩm bán chạy</h1></a>
-    <div class="row banchay-page-row justify-content-center ">
-      <!-- san pham ban chay #1 -->
-          <div class="col-sm-3 col-lg-3 banchay-col" style="max-width: 21rem">
-            <div class="card ">
-              <img
-                src="/media/{{data.14.image}}"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body text-center">
-                <a href="/chitietsanpham-list/{{data.14.slug}}">
-                    <h5 class="card-title ">{{data.14.product_name}}</h5>
-                    <p class="card-text">{{data.14.price}}</p>
-                </a>
-              </div>
-            </div>
-            
+    <a href="#" class="home-title"><h1>Sản phẩm bán chạy</h1></a>
+    {% if banchay %}
+  <div class="row banchay-page justify-content-center ">
+    {% for item in banchay %}
+        <div class="col-sm-3 col-md-3 banchay-col" style="max-width: 18rem">
+          <div class="card">
+            <img
+              src="/media/{{item.image}}"
+              class="card-img-top"
+              alt="..."
+            />
+          <div class="card-body text-center">
+              <a href="/chitietsanpham-list/{{item.slug}}">
+                  <h5 class="card-title ">{{item.product_name}}</h5>
+                  <p class="card-text">{{item.price}}</p>
+              </a>
           </div>
-          <!-- san pham ban chay #2 -->
-          <div class="col-sm-3 col-lg-3 banchay-col" style="max-width: 21rem">
-            <div class="card">
-              <img
-                src="/media/{{data.0.image}}"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body text-center">
-                <a href="/chitietsanpham-list/{{data.0.slug}}">
-                    <h5 class="card-title ">{{data.0.product_name}}</h5>
-                    <p class="card-text">{{data.0.price}}</p>
-                </a>
-              </div>
-            </div>
-            
-          </div>
-
-          <div class="col-sm-3 col-lg-3 banchay-col" style="max-width: 21rem">
-            <div class="card">
-              <img
-                src="/media/{{data.13.image}}"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body text-center">
-                <a href="/chitietsanpham-list/{{data.13.slug}}">
-                    <h5 class="card-title ">{{data.13.product_name}}</h5>
-                    <p class="card-text">{{data.13.price}}</p>
-                </a>
-              </div>
-            </div>
-            
-          </div>
-
-          <div class="col-sm-3 col-lg-3 banchay-col" style="max-width: 21rem">
-            <div class="card">
-              <img
-                src="/media/{{data.7.image}}"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body text-center">
-                <a href="/chitietsanpham-list/{{data.7.slug}}">
-                    <h5 class="card-title ">{{data.7.product_name}}</h5>
-                    <p class="card-text">{{data.7.price}}</p>
-                </a>
-              </div>
-            </div>
-            
-          </div>
-
-          <div class="col-sm-3 col-lg-3 banchay-col" style="max-width: 21rem">
-            <div class="card">
-              <img
-                src="/media/{{data.2.image}}"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body text-center">
-                <a href="/chitietsanpham-list/{{data.2.slug}}">
-                    <h5 class="card-title ">{{data.2.product_name}}</h5>
-                    <p class="card-text">{{data.2.price}}</p>
-                </a>
-              </div>
-            </div>
-            
-          </div>
-
-          <div class="col-sm-3 col-lg-3 banchay-col" style="max-width: 21rem">
-            <div class="card">
-              <img
-                src="/media/{{data.32.image}}"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body text-center">
-                <a href="/chitietsanpham-list/{{data.32.slug}}">
-                    <h5 class="card-title ">{{data.32.product_name}}</h5>
-                    <p class="card-text">{{data.32.price}}</p>
-                </a>
-              </div>
-            </div>
-            
-          </div>
-
-          <div class="col-sm-3 col-lg-3 banchay-col" style="max-width: 21rem">
-            <div class="card">
-              <img
-                src="/media/{{data.29.image}}"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body text-center">
-                <a href="/chitietsanpham-list/{{data.29.slug}}">
-                    <h5 class="card-title ">{{data.29.product_name}}</h5>
-                    <p class="card-text">{{data.29.price}}</p>
-                </a>
-              </div>
-            </div>
-            
-          </div>
-
-          <div class="col-sm-3 col-lg-3 banchay-col" style="max-width: 21rem">
-            <div class="card">
-              <img
-                src="/media/{{data.28.image}}"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body text-center">
-                <a href="/chitietsanpham-list/{{data.28.slug}}">
-                    <h5 class="card-title ">{{data.28.product_name}}</h5>
-                    <p class="card-text">{{data.28.price}}</p>
-                </a>
-              </div>
-            </div>
-            
-          </div>
-    </div>
+        </div>
+     
+  </div>
+    {% endfor %}
+  {% endif %}
+  </div>
 
     
 <!-- Gia vi sot -->
@@ -166,375 +50,131 @@
 </div>
 
   <div class="giavivasot">
-    <a href="/giavisot/"><h1>Gia vị & Sốt</h1></a>
-    <div class="row giavivasot-page-row justify-content-center ">
-      <!-- giavivasot #1 -->
-          <div class="col-sm-3 col-lg-3 giavivasot-col" style="max-width: 21rem">
-            <div class="card">
-              <img
-                src="/media/{{data.16.image}}"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body text-center">
-                <a href="/chitietsanpham-list/{{data.16.slug}}">
-                    <h5 class="card-title ">{{data.16.product_name}}</h5>
-                    <p class="card-text">{{data.16.price}}</p>
-                </a>
-              </div>
-            </div>
-            
+    <a href="/giavisot/" class="home-title"><h1>Gia vị & Sốt</h1></a>
+    {% if giavisot %}
+  <div class="row giavisot-page justify-content-center ">
+    {% for item in giavisot %}
+        <div class="col-sm-3 col-md-3 giavisot-col" style="max-width: 18rem">
+          <div class="card">
+            <img
+              src="/media/{{item.image}}"
+              class="card-img-top"
+              alt="..."
+            />
+          <div class="card-body text-center">
+              <a href="/chitietsanpham-list/{{item.slug}}">
+                  <h5 class="card-title ">{{item.product_name}}</h5>
+                  <p class="card-text">{{item.price}}</p>
+              </a>
           </div>
-          <!-- giavisot chay #2 -->
-          <div class="col-sm-3 col-lg-3 giavivasot-col" style="max-width: 21rem">
-            <div class="card">
-              <img
-                src="/media/{{data.15.image}}"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body text-center">
-                <a href="/chitietsanpham-list/{{data.15.slug}}">
-                    <h5 class="card-title ">{{data.15.product_name}}</h5>
-                    <p class="card-text">{{data.15.price}}</p>
-                </a>
-              </div>
-            </div>
-            
-          </div>
-
-          <div class="col-sm-3 col-lg-3 giavivasot-col" style="max-width: 21rem">
-            <div class="card">
-              <img
-                src="/media/{{data.14.image}}"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body text-center">
-                <a href="/chitietsanpham-list/{{data.14.slug}}">
-                    <h5 class="card-title ">{{data.14.product_name}}</h5>
-                    <p class="card-text">{{data.14.price}}</p>
-                </a>
-              </div>
-            </div>
-            
-          </div>
-
-          <div class="col-sm-3 col-lg-3 giavivasot-col" style="max-width: 21rem">
-            <div class="card">
-              <img
-                src="/media/{{data.13.image}}"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body text-center">
-                <a href="/chitietsanpham-list/{{data.13.slug}}">
-                    <h5 class="card-title ">{{data.13.product_name}}</h5>
-                    <p class="card-text">{{data.13.price}}</p>
-                </a>
-              </div>
-            </div>
-            
-          </div>
-          
-          
-
+        </div>
+     
+  </div>
+    {% endfor %}
+  {% endif %}
     </div>
 
   </div>
 
   <div class="banhkeo">
-    <a href="/banhkeo/"><h1>Bánh kẹo</h1></a>
-    <div class="row banhkeo-page-row justify-content-center ">
-      <!-- banhkeo #1 -->
-          <div class="col-sm-3 col-lg-3 banhkeo-col" style="max-width: 21rem">
-            <div class="card">
-              <img
-                src="/media/{{data.20.image}}"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body text-center">
-                <a href="/chitietsanpham-list/{{data.20.slug}}">
-                    <h5 class="card-title ">{{data.20.product_name}}</h5>
-                    <p class="card-text">{{data.20.price}}</p>
-                </a>
-              </div>
-            </div>
-            
+    <a href="/banhkeo/" class="home-title"><h1>Bánh kẹo</h1></a>
+    {% if banhkeo %}
+  <div class="row banhkeo-page justify-content-center ">
+    {% for item in banhkeo %}
+        <div class="col-sm-3 col-md-3 banhkeo-col" style="max-width: 18rem">
+          <div class="card">
+            <img
+              src="/media/{{item.image}}"
+              class="card-img-top"
+              alt="..."
+            />
+          <div class="card-body text-center">
+              <a href="/chitietsanpham-list/{{item.slug}}">
+                  <h5 class="card-title ">{{item.product_name}}</h5>
+                  <p class="card-text">{{item.price}}</p>
+              </a>
           </div>
-          <!-- giavisot chay #2 -->
-          <div class="col-sm-3 col-lg-3 banhkeo-col" style="max-width: 21rem">
-            <div class="card">
-              <img
-                src="/media/{{data.27.image}}"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body text-center">
-                <a href="/chitietsanpham-list/{{data.27.slug}}">
-                    <h5 class="card-title ">{{data.27.product_name}}</h5>
-                    <p class="card-text">{{data.27.price}}</p>
-                </a>
-              </div>
-            </div>
-            
-          </div>
-
-          <div class="col-sm-3 col-lg-3 banhkeo-col" style="max-width: 21rem">
-            <div class="card">
-              <img
-                src="/media/{{data.26.image}}"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body text-center">
-                <a href="/chitietsanpham-list/{{data.26.slug}}">
-                    <h5 class="card-title ">{{data.26.product_name}}</h5>
-                    <p class="card-text">{{data.26.price}}</p>
-                </a>
-              </div>
-            </div>
-            
-          </div>
-
-          <div class="col-sm-3 col-lg-3 banhkeo-col" style="max-width: 21rem">
-            <div class="card">
-              <img
-                src="/media/{{data.4.image}}"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body text-center">
-                <a href="/chitietsanpham-list/{{data.4.slug}}">
-                    <h5 class="card-title ">{{data.4.product_name}}</h5>
-                    <p class="card-text">{{data.4.price}}</p>
-                </a>
-              </div>
-            </div>
-            
-          </div>
-          
-          
-
-    </div>
+        </div>
+     
+  </div>
+    {% endfor %}
+  {% endif %}
 
   </div>
 
   <div class="thucphamanlien">
-    <a href="/thucphamanlien/"><h1>Thực phẩm ăn liền</h1></a>
-    <div class="row thucphamanlien-page-row justify-content-center ">
-      <!-- thucphamanlien #1 -->
-          <div class="col-sm-3 col-lg-3 thucphamanlien-col" style="max-width: 21rem">
-            <div class="card">
-              <img
-                src="/media/{{data.21.image}}"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body text-center">
-                <a href="/chitietsanpham-list/{{data.21.slug}}">
-                    <h5 class="card-title ">{{data.21.product_name}}</h5>
-                    <p class="card-text">{{data.21.price}}</p>
-                </a>
-              </div>
-            </div>
-            
+    <a href="/thucphamanlien/" class="home-title"><h1>Thực phẩm ăn liền</h1></a>
+    {% if anlien %}
+  <div class="row anlien-page justify-content-center ">
+    {% for item in anlien %}
+        <div class="col-sm-3 col-md-3 douong-col" style="max-width: 18rem">
+          <div class="card">
+            <img
+              src="/media/{{item.image}}"
+              class="card-img-top"
+              alt="..."
+            />
+          <div class="card-body text-center">
+              <a href="/chitietsanpham-list/{{item.slug}}">
+                  <h5 class="card-title ">{{item.product_name}}</h5>
+                  <p class="card-text">{{item.price}}</p>
+              </a>
           </div>
-          <!-- thucphamanlien chay #2 -->
-          <div class="col-sm-3 col-lg-3 thucphamanlien-col" style="max-width: 21rem">
-            <div class="card">
-              <img
-                src="/media/{{data.19.image}}"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body text-center">
-                <a href="/chitietsanpham-list/{{data.19.slug}}">
-                    <h5 class="card-title ">{{data.19.product_name}}</h5>
-                    <p class="card-text">{{data.19.price}}</p>
-                </a>
-              </div>
-            </div>
-            
-          </div>
-
-          <div class="col-sm-3 col-lg-3 thucphamanlien-col" style="max-width: 21rem">
-            <div class="card">
-              <img
-                src="/media/{{data.18.image}}"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body text-center">
-                <a href="/chitietsanpham-list/{{data.18.slug}}">
-                    <h5 class="card-title ">{{data.18.product_name}}</h5>
-                    <p class="card-text">{{data.18.price}}</p>
-                </a>
-              </div>
-            </div>
-            
-          </div>
-
-          <div class="col-sm-3 col-lg-3 thucphamanlien-col" style="max-width: 21rem">
-            <div class="card">
-              <img
-                src="/media/{{data.17.image}}"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body text-center">
-                <a href="/chitietsanpham-list/{{data.17.slug}}">
-                    <h5 class="card-title ">{{data.17.product_name}}</h5>
-                    <p class="card-text">{{data.17.price}}</p>
-                </a>
-              </div>
-            </div>
-            
-          </div>
-          
-          
-
-    </div>
+        </div>
+     
+  </div>
+    {% endfor %}
+  {% endif %}
   </div>
 
   <div class="douong">
-    <a href="/douong/"><h1>Đồ uống</h1></a>
-    <div class="row douong-page-row justify-content-center ">
-      <!-- douong #1 -->
-          <div class="col-sm-3 col-lg-3 douong-col" style="max-width: 21rem">
-            <div class="card">
-              <img
-                src="/media/{{data.29.image}}"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body text-center">
-                <a href="/chitietsanpham-list/{{data.29.slug}}">
-                    <h5 class="card-title ">{{data.29.product_name}}</h5>
-                    <p class="card-text">{{data.29.price}}</p>
-                </a>
-              </div>
-            </div>
-            
+    <a href="/douong/" class="home-title"><h1>Đồ uống</h1></a>
+    {% if douong %}
+  <div class="row douong-page justify-content-center ">
+    {% for item in douong %}
+        <div class="col-sm-3 col-md-3 douong-col" style="max-width: 18rem">
+          <div class="card">
+            <img
+              src="/media/{{item.image}}"
+              class="card-img-top"
+              alt="..."
+            />
+          <div class="card-body text-center">
+              <a href="/chitietsanpham-list/{{item.slug}}">
+                  <h5 class="card-title ">{{item.product_name}}</h5>
+                  <p class="card-text">{{item.price}}</p>
+              </a>
           </div>
-          <!-- douong chay #2 -->
-          <div class="col-sm-3 col-lg-3 douong-col" style="max-width: 21rem">
-            <div class="card">
-              <img
-                src="/media/{{data.32.image}}"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body text-center">
-                <a href="/chitietsanpham-list/{{data.32.slug}}">
-                    <h5 class="card-title ">{{data.32.product_name}}</h5>
-                    <p class="card-text">{{data.32.price}}</p>
-                </a>
-              </div>
-            </div>
-            
-          </div>
-
-          <div class="col-sm-3 col-lg-3 douong-col" style="max-width: 21rem">
-            <div class="card">
-              <img
-                src="/media/{{data.30.image}}"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body text-center">
-                <a href="/chitietsanpham-list/{{data.30.slug}}">
-                    <h5 class="card-title ">{{data.30.product_name}}</h5>
-                    <p class="card-text">{{data.30.price}}</p>
-                </a>
-              </div>
-            </div>
-            
-          </div>
-
-          <div class="col-sm-3 col-lg-3 douong-col" style="max-width: 21rem">
-            <div class="card">
-              <img
-                src="/media/{{data.34.image}}"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body text-center">
-                <a href="/chitietsanpham-list/{{data.34.slug}}">
-                    <h5 class="card-title ">{{data.34.product_name}}</h5>
-                    <p class="card-text">{{data.34.price}}</p>
-                </a>
-              </div>
-            </div>
-            
-          </div>
-          
-          
-
-    </div>
+        </div>
+     
+  </div>
+    {% endfor %}
+  {% endif %}
   </div>
 
   <div class="rongbien">
-    <a href="/rongbien/"><h1>Rong biển</h1></a>
-    <div class="row rongbien-page-row justify-content-center ">
-      <!-- thucphamanlien #1 -->
-          <div class="col-sm-3 col-lg-3 rongbien-col" style="max-width: 21rem">
-            <div class="card">
-              <img
-                src="/media/{{data.12.image}}"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body text-center">
-                <a href="/chitietsanpham-list/{{data.12.slug}}">
-                    <h5 class="card-title ">{{data.12.product_name}}</h5>
-                    <p class="card-text">{{data.12.price}}</p>
-                </a>
-              </div>
-            </div>
-            
+    <a href="/rongbien/" class="home-title"><h1>Rong biển</h1></a>
+    {% if rongbien %}
+  <div class="row rongbien-page justify-content-center ">
+    {% for item in rongbien %}
+        <div class="col-sm-3 col-md-3 rongbien-col" style="max-width: 18rem">
+          <div class="card">
+            <img
+              src="/media/{{item.image}}"
+              class="card-img-top"
+              alt="..."
+            />
+          <div class="card-body text-center">
+              <a href="/chitietsanpham-list/{{item.slug}}">
+                  <h5 class="card-title ">{{item.product_name}}</h5>
+                  <p class="card-text">{{item.price}}</p>
+              </a>
           </div>
-          <!-- rongbien chay #2 -->
-          <div class="col-sm-3 col-lg-3 rongbien-col" style="max-width: 21rem">
-            <div class="card">
-              <img
-                src="/media/{{data.10.image}}"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body text-center">
-                <a href="/chitietsanpham-list/{{data.10.slug}}">
-                    <h5 class="card-title ">{{data.10.product_name}}</h5>
-                    <p class="card-text">{{data.10.price}}</p>
-                </a>
-              </div>
-            </div>
-            
-          </div>
-
-          <div class="col-sm-3 col-lg-3 rongbien-col" style="max-width: 21rem">
-            <div class="card">
-              <img
-                src="/media/{{data.9.image}}"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body text-center">
-                <a href="/chitietsanpham-list/{{data.9.slug}}">
-                    <h5 class="card-title ">{{data.9.product_name}}</h5>
-                    <p class="card-text">{{data.9.price}}</p>
-                </a>
-              </div>
-            </div>
-            
-          </div>
-
-          
-          
-          
-
-    </div>
+        </div>
+     
+  </div>
+    {% endfor %}
+  {% endif %}
   </div>
 </div>
 

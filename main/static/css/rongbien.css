@@ -31,18 +31,15 @@
     text-align: center;
 }
 .rongbien-page h5{
-    font-size: 20px;
-    font-family: quicksand-bold;
+  font-size: 20px;
+  font-family: quicksand-bold;
 }
-/* .rongbien-page p{
-    font-size: 20px;
-    font-family: quicksand-bold;
-} */
+
 .rongbien-page a{
-    text-decoration: none;
-    color: #000;
+  text-decoration: none;
+  color: #000;
 }
 .rongbien-col{
-  margin: 20px;
-  margin-bottom: 200px;
+margin: 20px;
+padding: 0px;
 }
