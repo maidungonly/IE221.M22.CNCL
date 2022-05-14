@@ -90,7 +90,7 @@ font-family: quicksand-bold;
 }
 .cart-row{
   font-family: quicksand;
-  font-size: 15px;
+  font-size: 18px;
 	display: flex;
     align-items: flex-stretch;
     padding-bottom: 10px;
@@ -125,4 +125,7 @@ font-family: quicksand-bold;
 }
 .row-image{
 	width: 100px;
+}
+.update-cart{
+  font-size: 18px;
 }

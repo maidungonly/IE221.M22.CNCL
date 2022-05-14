@@ -31,10 +31,9 @@
 }
 
 .kcook-image img{
-   height: 350px;
-   width: 450px;
+   width: 500px;
 }
-.nguyenlieu, .cachlam{
+/* .nguyenlieu, .cachlam{
     padding-left: 50px;
     padding-right: 60px;
     padding-bottom: 40px;
@@ -44,13 +43,13 @@
     padding-top: 20px;
     font-size: 25px;
     padding-bottom:5px;
-}
-.chitiet{
+} */
+/* .chitiet{
     padding-left: 15px;
     font-family: quicksand;
     border: 1px solid black;
-}
-.nguyenlieu pre{
+} */
+/* .nguyenlieu pre{
     border-radius: 10px;
     font-size: 18px;
 }
@@ -58,7 +57,28 @@
     border-radius: 10px;
     font-size: 18px;
 
+} */
+
+.chitietkcook{
+    overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 100; /* number of lines to show */
+           line-clamp: 20; 
+   -webkit-box-orient: vertical;
+   border: 2px solid #000;
+   margin: 45px;
+   padding: 20px;
+   border-radius: 20px;
+   font-family: quicksand;
+   font-size: 25px;
 }
+.nguyenlieu h2,.cachlam h2{
+    font-family: quicksand-bold;
+    padding-top: 20px;
+    font-size: 35px;
+    margin-left: 10px;
+} 
 .navigate-kcook{
     font-family: quicksand-bold;
     color: #4A4646;

@@ -21,7 +21,7 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-sm navbar-dark  navbar-first sticky-tops" style="background-color: #FFF691">
+  <nav class="navbar navbar-expand-sm navbar-dark  navbar-first sticky-top" style="background-color: #FFF691">
     <div class="container-fluid">
       <a href="/home/" class="navbar-brand mb-0 h1">
         <img src="{%static 'images\favicon-removebg-preview.png' %}" class="d-inline-block align-top">K-Mart
@@ -63,6 +63,7 @@
     </div>
   </div>
   </nav>
+  <!-- <a href="#" class="gotopbtn"><i class="fa-solid fa-square-arrow-up"></i></a> -->
   {% block tieude %}
 
   {% endblock %}
@@ -74,6 +75,17 @@
   {% block sanpham %}
   {% endblock %}
   {% block linkjs %}
+  <script type="text/javascript">
+    var counter =1;
+    setInterval(function(){
+      document.getElementById('radio'+counter).checked = true;
+      counter++;
+      if(counter > 5){
+        counter = 1;
+
+      }
+    },4000);
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>

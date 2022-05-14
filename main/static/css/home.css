@@ -19,7 +19,7 @@
     src: url(../font/ReenieBeanie-Regular.ttf);
   }
 
-
+/* ----------------------------------- */
 .img-banner{
     padding: 10px;
     width: 1600px;
@@ -27,7 +27,10 @@
 .home-title{
   text-decoration: none;
   font-family: quicksand-bold;
-  font-size: 30px;
+  font-size: 40px;
+  color: #000;
+}
+.home-title:hover{
   color: #000;
 }
 /* ---------------------------------- */
@@ -41,6 +44,7 @@
   text-decoration: none;
   color: #000;
 }
+
 .banchay-col{
 margin: 20px;
 padding: 0px;
@@ -57,6 +61,7 @@ padding: 0px;
   text-decoration: none;
   color: #000;
 }
+
 .giavisot-col{
 margin: 20px;
 padding: 0px;
@@ -73,6 +78,7 @@ padding: 0px;
   text-decoration: none;
   color: #000;
 }
+
 .banhkeo-col{
 margin: 20px;
 padding: 0px;
@@ -88,6 +94,7 @@ padding: 0px;
   text-decoration: none;
   color: #000;
 }
+
 .rongbien-col{
 margin: 20px;
 padding: 0px;
@@ -103,6 +110,8 @@ padding: 0px;
   text-decoration: none;
   color: #000;
 }
+
+
 .douong-col{
 margin: 20px;
 padding: 0px;
@@ -119,6 +128,7 @@ padding: 0px;
   text-decoration: none;
   color: #000;
 }
+
 .anlien-col{
 margin: 20px;
 padding: 0px;
