@@ -5,6 +5,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from .models import KcookPost, Product, Order, OrderItem
 from django.http import JsonResponse
 import json
+from .utils import cookieCart,cartData
 
 # def index(response,id):
 #     ls = ToDoList.objects.get(id = id)
@@ -62,56 +63,16 @@ def base(response):
 def kcook(response):
     """render trang kcook và truyền vào data là danh sách KcookPost đã được định nghĩa ở models.py"""
 
-    if response.user.is_authenticated:
-        customer = response.user.customer
-        order, created = Order.objects.get_or_create(
-            customer=customer, complete=False)
-        items = order.orderitem_set.all()
-        cartItems = order.get_cart_items
-    else:
-        # items = []
-        # order = {'get_cart_total': 0, 'get_cart_items': 0}
-        # cartItems = order['get_cart_items']
-        try:
-            cart = json.loads(response.COOKIES['cart'])
-        except:
-            cart = {}
-        print('Cart:', cart)
-
-        items = []
-        order = {'get_cart_total': 0, 'get_cart_items': 0}
-        cartItems = order['get_cart_items']
-
-        for i in cart:
-            cartItems += cart[i]['quantity']
+    cartdata=cartData(response)
+    cartItems = cartdata['cartItems']
     data = KcookPost.objects.all().order_by('-id')
     return render(response, "main/kcook.html", {'data': data,'cartItems':cartItems})
 
 
 def chitietkcook(response, id):
     """render trang chi tiết kcook thể hiện thông tin từng KcookPost"""
-    if response.user.is_authenticated:
-        customer = response.user.customer
-        order, created = Order.objects.get_or_create(
-            customer=customer, complete=False)
-        items = order.orderitem_set.all()
-        cartItems = order.get_cart_items
-    else:
-        # items = []
-        # order = {'get_cart_total': 0, 'get_cart_items': 0}
-        # cartItems = order['get_cart_items']
-        try:
-            cart = json.loads(response.COOKIES['cart'])
-        except:
-            cart = {}
-        print('Cart:', cart)
-
-        items = []
-        order = {'get_cart_total': 0, 'get_cart_items': 0}
-        cartItems = order['get_cart_items']
-
-        for i in cart:
-            cartItems += cart[i]['quantity']
+    cartdata=cartData(response)
+    cartItems = cartdata['cartItems']
     kcook_post = KcookPost.objects.get(id=id)
     # kcook_post = KcookPost.objects.get(id = kcook_post_id)
     # data=KcookPost.objects.filter(id=kcook_post).order_by('-id')
@@ -120,28 +81,8 @@ def chitietkcook(response, id):
 
 def home(response):
     """render trang home, truyền vào data Product"""
-    if response.user.is_authenticated:
-        customer = response.user.customer
-        order, created = Order.objects.get_or_create(
-            customer=customer, complete=False)
-        items = order.orderitem_set.all()
-        cartItems = order.get_cart_items
-    else:
-        # items = []
-        # order = {'get_cart_total': 0, 'get_cart_items': 0}
-        # cartItems = order['get_cart_items']
-        try:
-            cart = json.loads(response.COOKIES['cart'])
-        except:
-            cart = {}
-        print('Cart:', cart)
-
-        items = []
-        order = {'get_cart_total': 0, 'get_cart_items': 0}
-        cartItems = order['get_cart_items']
-
-        for i in cart:
-            cartItems += cart[i]['quantity']
+    cartdata=cartData(response)
+    cartItems = cartdata['cartItems']
     
     banchay = Product.objects.filter(pk__in = [47,37,41,51,54,62,64,71,81,15])
     giavisot = Product.objects.filter(cat_name = 2)[:5]
@@ -154,150 +95,46 @@ def home(response):
 
     return render(response, "main/home.html",context)
 
-# def chitietsanpham(response,slug):
-#     data = Product.objects.get(slug=slug)
-#     # chitietsanpham_post = Product.objects.get(id=id)
-#     # chitietsanpham_post = get_object_or_404(Product, slug=slug)
-#     # data = Product.objects.get(slug=slug)
-#     return render(response,"main/chitietsanpham.html",{'data':data})
 
 
 def thucphamanlien(response):
     """render trang thực phẩm ăn liền, truyền vào data là Product với CategoryId=6 (vì id=6 là thực phẩm ăn liền)"""
-    if response.user.is_authenticated:
-        customer = response.user.customer
-        order, created = Order.objects.get_or_create(
-            customer=customer, complete=False)
-        items = order.orderitem_set.all()
-        cartItems = order.get_cart_items
-    else:
-        # items = []
-        # order = {'get_cart_total': 0, 'get_cart_items': 0}
-        # cartItems = order['get_cart_items']
-        try:
-            cart = json.loads(response.COOKIES['cart'])
-        except:
-            cart = {}
-        print('Cart:', cart)
-
-        items = []
-        order = {'get_cart_total': 0, 'get_cart_items': 0}
-        cartItems = order['get_cart_items']
-
-        for i in cart:
-            cartItems += cart[i]['quantity']
+    cartdata=cartData(response)
+    cartItems = cartdata['cartItems']
     data = Product.objects.filter(cat_name=6)
     return render(response, "main/thucphamanlien.html", {'data': data,'cartItems':cartItems})
 
 
 def giavisot(response):
     """render trang gia vị và sốt, truyền vào data là Product với CategoryId=2 (vì id=2 là gia vị và sốt)"""
-    if response.user.is_authenticated:
-        customer = response.user.customer
-        order, created = Order.objects.get_or_create(
-            customer=customer, complete=False)
-        items = order.orderitem_set.all()
-        cartItems = order.get_cart_items
-    else:
-        # items = []
-        # order = {'get_cart_total': 0, 'get_cart_items': 0}
-        # cartItems = order['get_cart_items']
-        try:
-            cart = json.loads(response.COOKIES['cart'])
-        except:
-            cart = {}
-        print('Cart:', cart)
-
-        items = []
-        order = {'get_cart_total': 0, 'get_cart_items': 0}
-        cartItems = order['get_cart_items']
-
-        for i in cart:
-            cartItems += cart[i]['quantity']
+    cartdata=cartData(response)
+    cartItems = cartdata['cartItems']
     data = Product.objects.filter(cat_name=2)
     return render(response, "main/giavisot.html", {'data': data,'cartItems':cartItems})
 
 
 def douong(response):
     """render trang đồ uống, truyền vào data là Product với CategoryId=4 (vì id=4 là đồ uống)"""
-    if response.user.is_authenticated:
-        customer = response.user.customer
-        order, created = Order.objects.get_or_create(
-            customer=customer, complete=False)
-        items = order.orderitem_set.all()
-        cartItems = order.get_cart_items
-    else:
-        # items = []
-        # order = {'get_cart_total': 0, 'get_cart_items': 0}
-        # cartItems = order['get_cart_items']
-        try:
-            cart = json.loads(response.COOKIES['cart'])
-        except:
-            cart = {}
-        print('Cart:', cart)
-
-        items = []
-        order = {'get_cart_total': 0, 'get_cart_items': 0}
-        cartItems = order['get_cart_items']
-
-        for i in cart:
-            cartItems += cart[i]['quantity']
+    cartdata=cartData(response)
+    cartItems = cartdata['cartItems']
     data = Product.objects.filter(cat_name=4)
     return render(response, "main/douong.html", {'data': data,'cartItems':cartItems})
 
 
 def banhkeo(response):
     """render trang bánh kẹo, truyền vào data là Product với CategoryId=1 (vì id=1 là bánh kẹo)"""
-    if response.user.is_authenticated:
-        customer = response.user.customer
-        order, created = Order.objects.get_or_create(
-            customer=customer, complete=False)
-        items = order.orderitem_set.all()
-        cartItems = order.get_cart_items
-    else:
-        # items = []
-        # order = {'get_cart_total': 0, 'get_cart_items': 0}
-        # cartItems = order['get_cart_items']
-        try:
-            cart = json.loads(response.COOKIES['cart'])
-        except:
-            cart = {}
-        print('Cart:', cart)
-
-        items = []
-        order = {'get_cart_total': 0, 'get_cart_items': 0}
-        cartItems = order['get_cart_items']
-
-        for i in cart:
-            cartItems += cart[i]['quantity']
+    cartdata=cartData(response)
+    cartItems = cartdata['cartItems']
     data = Product.objects.filter(cat_name=1)
     return render(response, "main/banhkeo.html", {'data': data,'cartItems':cartItems})
 
 
 def rongbien(response):
     """render trang rong biển, truyền vào data là Product với CategoryId=5 (vì id=5 là rong biển)"""
-    if response.user.is_authenticated:
-        customer = response.user.customer
-        order, created = Order.objects.get_or_create(
-            customer=customer, complete=False)
-        items = order.orderitem_set.all()
-        cartItems = order.get_cart_items
-    else:
-        # items = []
-        # order = {'get_cart_total': 0, 'get_cart_items': 0}
-        # cartItems = order['get_cart_items']
-        try:
-            cart = json.loads(response.COOKIES['cart'])
-        except:
-            cart = {}
-        print('Cart:', cart)
+    cartdata=cartData(response)
+    cartItems = cartdata['cartItems']
 
-        items = []
-        order = {'get_cart_total': 0, 'get_cart_items': 0}
-        cartItems = order['get_cart_items']
 
-        for i in cart:
-            cartItems += cart[i]['quantity']
     data = Product.objects.filter(cat_name=5)
     return render(response, "main/rongbien.html", {'data': data,'cartItems':cartItems})
 # def thongtinmh(response):
@@ -307,28 +144,9 @@ def rongbien(response):
 
 def search(request):
     """render trang search, trang này sẽ hiện kết quả khi người dùng nhập từ khóa vào ô search"""
-    if request.user.is_authenticated:
-        customer = request.user.customer
-        order, created = Order.objects.get_or_create(
-            customer=customer, complete=False)
-        items = order.orderitem_set.all()
-        cartItems = order.get_cart_items
-    else:
-        # items = []
-        # order = {'get_cart_total': 0, 'get_cart_items': 0}
-        # cartItems = order['get_cart_items']
-        try:
-            cart = json.loads(request.COOKIES['cart'])
-        except:
-            cart = {}
-        print('Cart:', cart)
+    cartdata=cartData(request)
+    cartItems = cartdata['cartItems']
 
-        items = []
-        order = {'get_cart_total': 0, 'get_cart_items': 0}
-        cartItems = order['get_cart_items']
-
-        for i in cart:
-            cartItems += cart[i]['quantity']
     if request.method == "POST":
         searched = request.POST['searched']
         product = Product.objects.filter(product_name__contains=searched)
@@ -369,28 +187,8 @@ def updateItem(request):
 
 def chitietsanpham(request, slug):
     """render trang chi tiết sản phẩm"""
-    if request.user.is_authenticated:
-        customer = request.user.customer
-        order, created = Order.objects.get_or_create(
-            customer=customer, complete=False)
-        items = order.orderitem_set.all()
-        cartItems = order.get_cart_items
-    else:
-        # items = []
-        # order = {'get_cart_total': 0, 'get_cart_items': 0}
-        # cartItems = order['get_cart_items']
-        try:
-            cart = json.loads(request.COOKIES['cart'])
-        except:
-            cart = {}
-        print('Cart:', cart)
-
-        items = []
-        order = {'get_cart_total': 0, 'get_cart_items': 0}
-        cartItems = order['get_cart_items']
-
-        for i in cart:
-            cartItems += cart[i]['quantity']
+    cartdata=cartData(request)
+    cartItems = cartdata['cartItems']
 
     data = Product.objects.get(slug=slug)
     context = {'products': data, 'cartItems': cartItems}
@@ -399,43 +197,11 @@ def chitietsanpham(request, slug):
 
 def giohang(request):
     """render trang giỏ hàng"""
-    if request.user.is_authenticated:
-        customer = request.user.customer
-        order, created = Order.objects.get_or_create(
-            customer=customer, complete=False)
-        items = order.orderitem_set.all()
-        cartItems = order.get_cart_items
-    else:
-        try:
-            cart = json.loads(request.COOKIES['cart'])
-        except:
-            cart = {}
-        print('Cart:', cart)
+    cartdata=cartData(request)
+    cartItems = cartdata['cartItems']
+    items = cartdata['items']
+    order= cartdata['order']
 
-        items = []
-        order = {'get_cart_total': 0, 'get_cart_items': 0}
-        cartItems = order['get_cart_items']
-
-        for i in cart:
-            cartItems += cart[i]['quantity']
-
-            product = Product.objects.get(id=i)
-            total = (product.price * cart[i]['quantity'])
-
-            order['get_cart_total'] += total
-            order['get_cart_items'] += cart[i]['quantity']
-
-            item = {
-                'product': {
-                    'id': product.id,
-                    'product_name': product.product_name,
-                    'price': product.price,
-                    'image': product.image
-                },
-                'quantity': cart[i]['quantity'],
-                'get_total': total,
-            }
-            items.append(item)
 
     context = {'items': items, 'order': order, 'cartItems': cartItems}
     return render(request, 'main/giohang.html', context)
@@ -443,28 +209,10 @@ def giohang(request):
 
 def thongtinmh(response):
     """render trang thông tin mua hàng"""
-    if response.user.is_authenticated:
-        customer = response.user.customer
-        order, created = Order.objects.get_or_create(
-            customer=customer, complete=False)
-        items = order.orderitem_set.all()
-        cartItems = order.get_cart_items
-    else:
-        # items = []
-        # order = {'get_cart_total': 0, 'get_cart_items': 0}
-        # cartItems = order['get_cart_items']
-        try:
-            cart = json.loads(response.COOKIES['cart'])
-        except:
-            cart = {}
-        print('Cart:', cart)
-
-        items = []
-        order = {'get_cart_total': 0, 'get_cart_items': 0}
-        cartItems = order['get_cart_items']
-
-        for i in cart:
-            cartItems += cart[i]['quantity']
+    cartdata=cartData(response)
+    cartItems = cartdata['cartItems']
+    items = cartdata['items']
+    order= cartdata['order']
 
     context = {'items': items, 'order': order,'cartItems':cartItems}
     return render(response, 'main/thongtinmh.html', context)
