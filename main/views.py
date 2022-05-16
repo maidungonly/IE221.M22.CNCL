@@ -221,6 +221,7 @@ def thongtinmh(response):
     return render(response, 'main/thongtinmh.html', context)
 
 def processOrder(request):
+    """Quy trình order hàng và thu thập dữ liệu lưu vào database"""
     print('Data:',request.body)
     transaction_id = datetime.datetime.now().timestamp()
     data = json.loads(request.body)

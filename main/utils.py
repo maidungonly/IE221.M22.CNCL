@@ -3,6 +3,7 @@ from .models import *
 
 
 def cookieCart(request):
+    """tính toán các dữ liệu như là số lượng sản phẩm trong cart, tổng số tiền,..."""
     try:
         cart = json.loads(request.COOKIES['cart'])
     except:
@@ -42,6 +43,7 @@ def cookieCart(request):
 
 
 def cartData(request):
+    """Return dữ liệu lấy được từ cookie (người không đăng nhập) trả về cho views.py"""
     if request.user.is_authenticated:
         customer = request.user.customer
         order, created = Order.objects.get_or_create(customer=customer, complete=False)
@@ -56,6 +58,7 @@ def cartData(request):
     return{'cartItems':cartItems,'order':order,'items':items}
 
 def guestOrder(request,data):
+    """Quy trình order hàng và thu thập dữ liệu lưu vào database"""
     print("User not logged in")
     print("COOKIES:",request.COOKIES)
     name = data['form']['name']
