@@ -23,7 +23,7 @@
             <p>{{products.product_name}}</p>
             <h3>{{products.price}}</h3>
             <button type="button" class="btn themvaogio-btn update-cart" data-action="add" data-product="{{products.id}}">Thêm vào giỏ hàng</button>
-            <button type="button" class="btn muangay-btn ">Mua ngay</button>
+            <a type="button" class="btn update-cart muangay-btn" data-action="add" data-product="{{products.id}}" href="/thongtinmuahang/">Mua ngay</a>
 
         </div>
     </div>
@@ -36,4 +36,12 @@
 </div>
 
 
+{% endblock %}
+{% block checkoutjs %}
+<!-- <script>
+    $('#muangay-btn').on('click',function(){
+        window.location.href = "{% url 'thongtinmuahang' %}"
+
+    })
+</script> -->
 {% endblock %}
