@@ -1,11 +1,14 @@
+from itertools import product
 from multiprocessing import context
 from queue import PriorityQueue
+from sqlite3 import Cursor
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
-from .models import KcookPost, Product, Order, OrderItem
+from .models import Customer, KcookPost, Product, Order, OrderItem,ShippingAddress
 from django.http import JsonResponse
 import json
-from .utils import cookieCart,cartData
+from .utils import cookieCart,cartData,guestOrder
+import datetime
 
 # def index(response,id):
 #     ls = ToDoList.objects.get(id = id)
@@ -216,3 +219,29 @@ def thongtinmh(response):
 
     context = {'items': items, 'order': order,'cartItems':cartItems}
     return render(response, 'main/thongtinmh.html', context)
+
+def processOrder(request):
+    print('Data:',request.body)
+    transaction_id = datetime.datetime.now().timestamp()
+    data = json.loads(request.body)
+
+    if request.user.is_authenticated:
+        customer = request.user.customer
+        order, created = Order.objects.get_or_create(customer=customer, complete=False)
+       
+    else:
+        customer,order = guestOrder(request,data)
+    total = float(data['form']['total'])
+    order.transaction_id = transaction_id
+
+    if total == order.get_cart_total:
+        order.complete = True
+
+    order.save()
+
+    ShippingAddress.objects.create(
+            customer=customer,
+            order=order,
+            address = data['shipping']['address']
+        )
+    return JsonResponse('Payment submitted..', safe=False)
