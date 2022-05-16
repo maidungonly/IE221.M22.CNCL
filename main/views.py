@@ -87,12 +87,12 @@ def home(response):
     cartdata=cartData(response)
     cartItems = cartdata['cartItems']
     
-    banchay = Product.objects.filter(pk__in = [47,37,41,51,54,62,64,71,81,15])
-    giavisot = Product.objects.filter(cat_name = 2)[:5]
-    banhkeo = Product.objects.filter(cat_name = 1)[:5]
-    rongbien = Product.objects.filter(cat_name = 5)[:5]
-    douong = Product.objects.filter(cat_name = 4)[:5] 
-    anlien = Product.objects.filter(cat_name = 6)[:5]
+    banchay = Product.objects.filter(pk__in = [47,37,41,51,54,62,64,71])
+    giavisot = Product.objects.filter(cat_name = 2)[:7]
+    banhkeo = Product.objects.filter(cat_name = 1)[:7]
+    rongbien = Product.objects.filter(cat_name = 5)[:7]
+    douong = Product.objects.filter(cat_name = 4)[:7] 
+    anlien = Product.objects.filter(cat_name = 6)[:7]
     context = {'banchay': banchay, 'cartItems': cartItems,'giavisot':giavisot,'banhkeo':banhkeo,'rongbien':rongbien,'douong':douong,'anlien':anlien}
     # data = Product.objects.all()
 
