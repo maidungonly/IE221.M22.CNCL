@@ -21,26 +21,28 @@
 {% block sanpham %}
 <div class="rongbien-page">
   {% if data %}
-  <div class="row rongbien-page-row justify-content-center ">
-    {% for rongbien in data %}
-        <div class="col-sm-3 col-md-3 rongbien-col" style="max-width: 18rem">
-          <div class="card">
-            <img
-              src="/media/{{rongbien.image}}"
-              class="card-img-top"
-              alt="..."
-            />
-          <div class="card-body text-center">
-              <a href="/chitietsanpham-list/{{rongbien.slug}}">
-                  <h5 class="card-title ">{{rongbien.product_name}}</h5>
-                  <p class="card-text">{{rongbien.price}}</p>
-              </a>
+  <div class="container">
+    <div class="row rongbien-page-row justify-content-center ">
+      {% for rongbien in data %}
+          <div class="col-sm-3 col-md-3 rongbien-col" style="max-width: 18rem">
+            <div class="card">
+              <img
+                src="/media/{{rongbien.image}}"
+                class="card-img-top"
+                alt="..."
+              />
+            <div class="card-body text-center">
+                <a href="/chitietsanpham-list/{{rongbien.slug}}">
+                    <h5 class="card-title ">{{rongbien.product_name}}</h5>
+                    <p class="card-text">{{rongbien.price}}</p>
+                </a>
+            </div>
           </div>
-        </div>
-     
+       
+    </div>
+      {% endfor %}
+    {% endif %}
   </div>
-    {% endfor %}
-  {% endif %}
+  </div>
 </div>
-
 {% endblock %}

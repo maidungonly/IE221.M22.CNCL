@@ -21,26 +21,28 @@
 {% block sanpham %}
 <div class="douong-page">
   {% if data %}
-  <div class="row douong-page-row justify-content-center ">
-    {% for douong in data %}
-        <div class="col-sm-3 col-md-3 douong-col" style="max-width: 18rem">
-          <div class="card">
-            <img
-              src="/media/{{douong.image}}"
-              class="card-img-top"
-              alt="..."
-            />
-          <div class="card-body text-center">
-              <a href="/chitietsanpham-list/{{douong.slug}}">
-                  <h5 class="card-title ">{{douong.product_name}}</h5>
-                  <p class="card-text">{{douong.price}}</p>
-              </a>
+  <div class="container">
+    <div class="row douong-page-row justify-content-center ">
+      {% for douong in data %}
+          <div class="col-sm-3 col-md-3 douong-col" style="max-width: 18rem">
+            <div class="card">
+              <img
+                src="/media/{{douong.image}}"
+                class="card-img-top"
+                alt="..."
+              />
+            <div class="card-body text-center">
+                <a href="/chitietsanpham-list/{{douong.slug}}">
+                    <h5 class="card-title ">{{douong.product_name}}</h5>
+                    <p class="card-text">{{douong.price}}</p>
+                </a>
+            </div>
           </div>
-        </div>
-     
+       
+    </div>
+      {% endfor %}
+    {% endif %}
   </div>
-    {% endfor %}
-  {% endif %}
+  </div>
 </div>
-
 {% endblock %}
