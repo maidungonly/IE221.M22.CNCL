@@ -50,10 +50,10 @@
     margin: 20px;
 }
 
-.kcook-post .btn-xemtiep{
+/* .kcook-post .btn-xemtiep{
     margin: 30px;
     font-family: quicksand-medium;
-}
+} */
 .kcook-post .btn-xemtiep:hover{
     text-decoration: underline;
 }
