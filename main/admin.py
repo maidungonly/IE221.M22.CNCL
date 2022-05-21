@@ -28,7 +28,7 @@ class OrderAdmin(admin.ModelAdmin):
 class ShippingAdmin(admin.ModelAdmin):
     list_display = ('id','customer','order','address','date_added')
 
-"""Điều chỉnh hiện module trên trang quản lý database"""
+"""Điều chỉnh hiện thông tin từng module trên trang quản lý database"""
 admin.site.register(KcookPost,KcookPostAdmin)
 admin.site.register(Categrory,CatAdmin)
 admin.site.register(Product,ProductAdmin)

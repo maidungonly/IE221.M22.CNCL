@@ -41,10 +41,6 @@ import datetime
 
 #     return render (response,"main/home.html",{'data':data})
 
-
-def base(response):
-    """render sườn chung dành cho các page"""
-    return render(response, "main/base.html", {})
 # def create(response):
 #     if response.method == "POST":
 #         form = CreateNewList(response.POST)
@@ -63,6 +59,11 @@ def base(response):
 #     return render(response,"main/giohang.html",{})
 
 
+
+def base(response):
+    """render sườn chung dành cho các page"""
+    return render(response, "main/base.html", {})
+
 def kcook(response):
     """render trang kcook và truyền vào data là danh sách KcookPost đã được định nghĩa ở models.py"""
 
@@ -77,8 +78,6 @@ def chitietkcook(response, id):
     cartdata=cartData(response)
     cartItems = cartdata['cartItems']
     kcook_post = KcookPost.objects.get(id=id)
-    # kcook_post = KcookPost.objects.get(id = kcook_post_id)
-    # data=KcookPost.objects.filter(id=kcook_post).order_by('-id')
     return render(response, "main/chitietkcook.html", {'data': kcook_post,'cartItems':cartItems})
 
 
@@ -94,7 +93,6 @@ def home(response):
     douong = Product.objects.filter(cat_name = 4)[:7] 
     anlien = Product.objects.filter(cat_name = 6)[:7]
     context = {'banchay': banchay, 'cartItems': cartItems,'giavisot':giavisot,'banhkeo':banhkeo,'rongbien':rongbien,'douong':douong,'anlien':anlien}
-    # data = Product.objects.all()
 
     return render(response, "main/home.html",context)
 
@@ -140,9 +138,7 @@ def rongbien(response):
 
     data = Product.objects.filter(cat_name=5)
     return render(response, "main/rongbien.html", {'data': data,'cartItems':cartItems})
-# def thongtinmh(response):
-#     """render trang thông tin mua hàng"""
-#     return render(response,"main/thongtinmh.html",{})
+
 
 
 def search(request):
